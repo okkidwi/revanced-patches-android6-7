@@ -67,7 +67,7 @@ The official Patch bundle provided by ReVanced and the community.
 | `microg-support` | Allows YouTube ReVanced to run without root and under a different package name with Vanced MicroG. | 17.34.36 |
 | `optimize-resource` | Removes duplicate resources and adds missing translation files from YouTube. | 17.34.36 |
 | `overlay-buttons` | Add overlay buttons for ReVanced Extended. | 17.34.36 |
-| `patch-options` | Create an options.toml file. | all |
+| `patch-options` | Create an options.toml file. | 17.34.36 |
 | `remove-player-button-background` | Removes the background from the video player buttons. | 17.34.36 |
 | `return-youtube-dislike` | Shows the dislike count of videos using the Return YouTube Dislike API. | 17.34.36 |
 | `settings` | Applies mandatory patches to implement ReVanced settings into the application. | 17.34.36 |
@@ -75,38 +75,6 @@ The official Patch bundle provided by ReVanced and the community.
 | `swipe-controls` | Adds volume and brightness swipe controls. | 17.34.36 |
 | `theme` | Applies a custom theme (default: amoled). | 17.34.36 |
 | `translations` | Add Crowdin Translations. | 17.34.36 |
-</details>
-
-### [📦 `com.google.android.apps.youtube.music`](https://play.google.com/store/apps/details?id=com.google.android.apps.youtube.music)
-<details>
-
-| 💊 Patch | 📜 Description | 🏹 Target Version |
-|:--------:|:--------------:|:-----------------:|
-| `background-play` | Enables playing music in the background. | all |
-| `client-spoof-music` | Spoofs the YouTube Music client. | all |
-| `custom-branding-music-afn-blue` | Changes the YouTube Music launcher icon (Afn / Blue). | all |
-| `custom-branding-music-afn-red` | Changes the YouTube Music launcher icon (Afn / Red). | all |
-| `custom-branding-music-revancify` | Changes the YouTube Music launcher icon to your choice (Revancify). | all |
-| `enable-black-navbar` | Sets the navigation bar color to black. | all |
-| `enable-color-match-player` | Matches the fullscreen player color with the minimized one. | all |
-| `enable-force-minimized-player` | Permanently keep player minimized even if another track is played. | all |
-| `enable-force-shuffle` | Enable force shuffle even if another track is played. | all |
-| `enable-opus-codec` | Enable opus codec when playing audio. | all |
-| `enable-tablet-mode` | Enable landscape mode on phone. | all |
-| `enable-zen-mode` | Adds a grey tint to the video player to reduce eye strain. | all |
-| `exclusive-audio-playback` | Enables the option to play music without video. | all |
-| `hide-compact-header` | Hides the music category bar at the top of the homepage. | all |
-| `hide-get-premium` | Removes all "Get Premium" evidences from the avatar menu. | all |
-| `hide-music-ads` | Removes ads in the music player. | all |
-| `hide-music-cast-button` | Hides the cast button in the video player and header | all |
-| `hide-taste-builder` | Removes the "Tell us which artists you like" card from the home screen. | all |
-| `hide-upgrade-button` | Removes the upgrade tab from the pivot bar. | all |
-| `minimized-playback-music` | Enables minimized playback on Kids music. | all |
-| `music-microg-support` | Allows YouTube Music ReVanced to run without root and under a different package name. | all |
-| `music-settings` | Adds settings for ReVanced to YouTube Music. | all |
-| `optimize-resource-music` | Remove unnecessary resources. | all |
-| `patch-options` | Create an options.toml file. | all |
-| `translations-music` | Add Crowdin Translations for YouTube Music | all |
 </details>
 
 

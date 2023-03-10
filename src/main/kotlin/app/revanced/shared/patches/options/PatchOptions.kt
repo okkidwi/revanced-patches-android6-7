@@ -6,12 +6,12 @@ import app.revanced.patcher.annotation.Version
 import app.revanced.patcher.data.ResourceContext
 import app.revanced.patcher.patch.annotations.Patch
 import app.revanced.patcher.patch.*
-import app.revanced.shared.annotation.RVXCompatibility
+import app.revanced.shared.annotation.YouTubeCompatibility
 
 @Patch
 @Name("patch-options")
 @Description("Create an options.toml file.")
-@RVXCompatibility
+@YouTubeCompatibility
 @Version("0.0.1")
 class PatchOptions : ResourcePatch {
     override fun execute(context: ResourceContext): PatchResult {
@@ -46,19 +46,6 @@ class PatchOptions : ResourcePatch {
                 default = "app.rvx.android.youtube",
                 title = "Package Name of YouTube",
                 description = "The package name of the YouTube. (NON-ROOT user only)",
-                required = true
-            )
-        )
-
-        /*
-        * Custom Package Name (YouTube Music)
-        */
-        internal var Music_PackageName: String? by option(
-            PatchOption.StringOption(
-                key = "Music_PackageName",
-                default = "app.rvx.android.apps.youtube.music",
-                title = "Package Name of YouTube Music",
-                description = "The package name of the YouTube Music. (NON-ROOT user only)",
                 required = true
             )
         )
