@@ -1,20 +1,14 @@
 package app.revanced.patches.youtube.layout.general.pivotbar.createbutton.bytecode.fingerprints
 
-import app.revanced.patcher.extensions.or
 import app.revanced.patcher.fingerprint.method.impl.MethodFingerprint
-import app.revanced.patches.youtube.misc.resourceid.patch.SharedResourcdIdPatch
-import org.jf.dexlib2.iface.instruction.WideLiteralInstruction
-import org.jf.dexlib2.AccessFlags
 import org.jf.dexlib2.Opcode
 
 object PivotBarCreateButtonViewFingerprint : MethodFingerprint(
-    returnType = "V",
-    access = AccessFlags.PUBLIC or AccessFlags.FINAL,
-    parameters = listOf("Z"),
-    customFingerprint = { methodDef ->
-        methodDef.implementation?.instructions?.any {
-            it.opcode.ordinal == Opcode.CONST.ordinal &&
-            (it as? WideLiteralInstruction)?.wideLiteral == SharedResourcdIdPatch.imageOnlyTabId
-        } == true
-    }
+    opcodes = listOf(
+        Opcode.INVOKE_DIRECT_RANGE, // unique instruction anchor
+        Opcode.CONST_4,
+        Opcode.INVOKE_VIRTUAL,
+        Opcode.MOVE_RESULT_OBJECT,
+        Opcode.INVOKE_STATIC
+    )
 )
