@@ -25,7 +25,7 @@ class HapticFeedBackBytecodePatch : BytecodePatch(
         MarkerHapticsFingerprint,
         SeekHapticsFingerprint,
         ScrubbingHapticsFingerprint,
-        ZoomHapticsFingerprint
+        //ZoomHapticsFingerprint
     )
 ) {
     override fun execute(context: BytecodeContext): PatchResult {
@@ -34,7 +34,7 @@ class HapticFeedBackBytecodePatch : BytecodePatch(
             SeekHapticsFingerprint to "disableSeekVibrate",
             ScrubbingHapticsFingerprint to "disableScrubbingVibrate",
             MarkerHapticsFingerprint to "disableChapterVibrate",
-            ZoomHapticsFingerprint to "disableZoomVibrate"
+            //ZoomHapticsFingerprint to "disableZoomVibrate"
         ).map { (fingerprint, name) ->
             fingerprint.result?.let {
                 if (fingerprint == SeekHapticsFingerprint)
