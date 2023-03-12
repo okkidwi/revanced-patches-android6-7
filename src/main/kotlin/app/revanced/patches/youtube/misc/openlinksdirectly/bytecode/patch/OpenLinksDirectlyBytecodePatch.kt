@@ -3,8 +3,7 @@ package app.revanced.patches.youtube.misc.openlinksdirectly.bytecode.patch
 import app.revanced.patcher.annotation.Name
 import app.revanced.patcher.annotation.Version
 import app.revanced.patcher.data.BytecodeContext
-import app.revanced.patcher.extensions.addInstructions
-import app.revanced.patcher.fingerprint.method.impl.MethodFingerprintResult
+import app.revanced.patcher.extensions.replaceInstruction
 import app.revanced.patcher.patch.BytecodePatch
 import app.revanced.patcher.patch.PatchResult
 import app.revanced.patcher.patch.PatchResultSuccess
@@ -12,8 +11,6 @@ import app.revanced.patches.youtube.misc.openlinksdirectly.bytecode.fingerprints
 import app.revanced.shared.annotation.YouTubeCompatibility
 import app.revanced.shared.extensions.toErrorResult
 import app.revanced.shared.util.integrations.Constants.MISC_PATH
-import org.jf.dexlib2.iface.instruction.Instruction
-import org.jf.dexlib2.iface.instruction.formats.Instruction11x
 import org.jf.dexlib2.iface.instruction.formats.Instruction35c
 
 @Name("enable-open-links-directly-bytecode-patch")
@@ -28,30 +25,20 @@ class OpenLinksDirectlyBytecodePatch : BytecodePatch(
     override fun execute(context: BytecodeContext): PatchResult {
 
         arrayOf(
-            OpenLinksDirectlyFingerprintPrimary to true,
-            OpenLinksDirectlyFingerprintSecondary to false
-        ).map { (fingerprint, boolean) ->
-            fingerprint.result?.hookUriParser(boolean) ?: return fingerprint.toErrorResult()
+            OpenLinksDirectlyFingerprintPrimary,
+            OpenLinksDirectlyFingerprintSecondary
+        ).forEach {
+            val result = it.result?: return it.toErrorResult()
+            val insertIndex = result.scanResult.patternScanResult!!.startIndex
+            with (result.mutableMethod) {
+                val register = (implementation!!.instructions[insertIndex] as Instruction35c).registerC
+                replaceInstruction(
+                    insertIndex,
+                    "invoke-static {v$register}, $MISC_PATH/OpenLinksDirectlyPatch;->enableBypassRedirect(Ljava/lang/String;)Landroid/net/Uri;"
+                )
+            }
         }
 
         return PatchResultSuccess()
     }
-}
-
-fun MethodFingerprintResult.hookUriParser(isPrimaryFingerprint: Boolean) {
-    fun getTargetRegister(instruction: Instruction): Int {
-        if (isPrimaryFingerprint) return (instruction as Instruction35c).registerC
-        return (instruction as Instruction11x).registerA
-    }
-    val startIndex = scanResult.patternScanResult!!.startIndex
-    val instruction = method.implementation!!.instructions.elementAt(startIndex + 1)
-    val insertIndex = if (isPrimaryFingerprint) 1 else 2
-    val targetRegister = getTargetRegister(instruction)
-
-    mutableMethod.addInstructions(
-        startIndex + insertIndex, """
-            invoke-static {v$targetRegister}, $MISC_PATH/OpenLinksDirectlyPatch;->enableBypassRedirect(Ljava/lang/String;)Ljava/lang/String;
-            move-result-object v$targetRegister
-        """
-    )
 }
