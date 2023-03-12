@@ -15,8 +15,8 @@ import app.revanced.shared.annotation.YouTubeCompatibility
 import app.revanced.shared.util.resources.ResourceHelper
 
 @Patch
-@Name("hide-first-background-notification")  // renamed from "hide-pip-notification"
-@Description("Disable notification when you first launch background play.")
+@Name("hide-firsttime-background-notification")  // renamed from "hide-pip-notification"
+@Description("Disable notification when you launch background play for the first time.")
 @DependsOn(
     [
         PiPNotificationBytecodePatch::class,
@@ -30,7 +30,7 @@ class PiPNotificationPatch : ResourcePatch {
 
         ResourceHelper.patchSuccess(
             context,
-            "hide-first-background-notification"
+            "hide-firsttime-background-notification"
         )
 
         return PatchResultSuccess()

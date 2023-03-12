@@ -433,7 +433,7 @@
             <Preference android:title="sponsorblock" android:summary="@string/revanced_patches_excluded" android:selectable="false"/>
             <Preference android:title="microg-support" android:summary="@string/revanced_patches_excluded" android:selectable="false"/>
             <Preference android:title="client-spoof" android:summary="@string/revanced_patches_excluded" android:selectable="false"/>
-            <Preference android:title="hide-first-background-notification" android:summary="@string/revanced_patches_excluded" android:selectable="false"/>
+            <Preference android:title="hide-firsttime-background-notification" android:summary="@string/revanced_patches_excluded" android:selectable="false"/>
             <Preference android:title="hide-tooltip-content" android:summary="@string/revanced_patches_excluded" android:selectable="false"/>
             <Preference android:title="optimize-resource" android:summary="@string/revanced_patches_excluded" android:selectable="false"/>
             <Preference android:title="remove-player-button-background" android:summary="@string/revanced_patches_excluded" android:selectable="false"/>
