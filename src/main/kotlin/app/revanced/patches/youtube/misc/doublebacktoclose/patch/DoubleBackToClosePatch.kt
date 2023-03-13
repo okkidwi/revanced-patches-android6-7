@@ -1,5 +1,6 @@
 package app.revanced.patches.youtube.misc.doublebacktoclose.patch
 
+import app.revanced.patcher.annotation.Description
 import app.revanced.patcher.annotation.Name
 import app.revanced.patcher.annotation.Version
 import app.revanced.patcher.data.BytecodeContext
@@ -9,7 +10,7 @@ import app.revanced.patcher.fingerprint.method.impl.MethodFingerprint.Companion.
 import app.revanced.patcher.patch.BytecodePatch
 import app.revanced.patcher.patch.PatchResult
 import app.revanced.patcher.patch.PatchResultSuccess
-import app.revanced.patcher.patch.annotations.DependsOn
+import app.revanced.patcher.patch.annotations.Patch
 import app.revanced.patcher.util.proxy.mutableTypes.MutableMethod
 import app.revanced.patches.youtube.misc.doublebacktoclose.fingerprint.OnBackPressedFingerprint
 import app.revanced.patches.youtube.misc.doublebacktoclose.fingerprint.ScrollPositionFingerprint
@@ -17,11 +18,13 @@ import app.revanced.patches.youtube.misc.doublebacktoclose.fingerprint.ScrollTop
 import app.revanced.patches.youtube.misc.doublebacktoclose.fingerprint.ScrollTopParentFingerprint
 import app.revanced.shared.annotation.YouTubeCompatibility
 import app.revanced.shared.extensions.toErrorResult
-import app.revanced.shared.patches.gestures.PredictiveBackGesturePatch
 import app.revanced.shared.util.integrations.Constants.UTILS_PATH
 
+@Patch(false)
 @Name("double-back-to-close")
-@DependsOn([PredictiveBackGesturePatch::class])
+@Description("Double tap the back button to close the app. Not working on 17.34.36")
+// unnecessary for Android 6~7
+// @DependsOn([PredictiveBackGesturePatch::class])
 @YouTubeCompatibility
 @Version("0.0.1")
 class DoubleBackToClosePatch : BytecodePatch(

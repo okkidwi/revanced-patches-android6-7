@@ -9,7 +9,6 @@ import app.revanced.patcher.patch.BytecodePatch
 import app.revanced.patcher.patch.PatchResult
 import app.revanced.patcher.patch.PatchResultSuccess
 import app.revanced.patcher.util.smali.ExternalLabel
-import app.revanced.patches.youtube.misc.doublebacktoclose.patch.DoubleBackToClosePatch
 import app.revanced.patches.youtube.misc.litho.filter.fingerprints.LithoFingerprint
 import app.revanced.patches.youtube.misc.swiperefresh.patch.SwipeRefreshPatch
 import app.revanced.shared.annotation.YouTubeCompatibility
@@ -22,7 +21,7 @@ import org.jf.dexlib2.Opcode
 
 @DependsOn(
     [
-        DoubleBackToClosePatch::class,
+        //DoubleBackToClosePatch::class,
         SwipeRefreshPatch::class
     ]
 )
