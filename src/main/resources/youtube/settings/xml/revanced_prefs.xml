@@ -65,6 +65,9 @@
         <!-- SETTINGS: HIDE_STORIES_SHELF
         <SwitchPreference android:title="@string/revanced_hide_stories_shelf_title" android:key="revanced_hide_stories_shelf" android:defaultValue="true" android:summaryOn="@string/revanced_hide_stories_shelf_summary_on" android:summaryOff="@string/revanced_hide_stories_shelf_summary_off" />SETTINGS: HIDE_STORIES_SHELF -->
 
+        <!-- SETTINGS: SWITCH_CREATE_NOTIFICATION
+        <SwitchPreference android:title="@string/revanced_switching_create_notification_title" android:key="revanced_switching_create_notification" android:defaultValue="false" android:summaryOn="@string/revanced_switching_create_notification_summary_on" android:summaryOff="@string/revanced_switching_create_notification_summary_off" />SETTINGS: SWITCH_CREATE_NOTIFICATION -->
+
         <!-- SETTINGS: HIDE_CREATE_BUTTON
         <SwitchPreference android:title="@string/revanced_hide_create_button_title" android:key="revanced_hide_create_button" android:defaultValue="true" android:summaryOn="@string/revanced_hide_create_button_summary_on" android:summaryOff="@string/revanced_hide_create_button_summary_off" />SETTINGS: HIDE_CREATE_BUTTON -->
 
@@ -378,6 +381,7 @@
             <Preference android:title="hide-email-address" android:summary="@string/revanced_patches_excluded" android:selectable="false"/>
             <Preference android:title="hide-snackbar" android:summary="@string/revanced_patches_excluded" android:selectable="false"/>
             <Preference android:title="header-switch" android:summary="@string/revanced_patches_excluded" android:selectable="false"/>
+            <Preference android:title="switch-create-notification" android:summary="@string/revanced_patches_excluded" android:selectable="false"/>
 
             <Preference android:title=" " android:selectable="false" android:summary="@string/revanced_layout_settings_player" />
             <Preference android:title="hide-cast-button" android:summary="@string/revanced_patches_excluded" android:selectable="false"/>
