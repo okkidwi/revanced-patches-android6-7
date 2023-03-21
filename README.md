@@ -1,8 +1,27 @@
-## 🧩 Patches
+# YouTube ReVanced for Android 6.0-7.1
+An unofficial ReVanced Extended for YouTube 17.34.36.  
+Based on inotia00's ReVanced Extended [v2.160.1](https://github.com/inotia00/revanced-patches/releases/tag/v2.160.1)
 
-The official Patch bundle provided by ReVanced and the community.
+## About
+The last YouTube app available on Android 6 & 7 is v17.34.36.
 
-> Looking for the JSON variant of this? [Click here](patches.json).
+On the other hand, latest ReVanced and RVX patches don't support YouTube 17.34.36, but RVX v2.160.1 is the last version in which most of features work properly.
+
+So I forked ReVanced Extended patches v2.160.1 and fixed some patches and backported some features for Android 6.0-7.1 users.
+
+Because I released this on the GitHub repository, which means that you can use ReVanced Manager to build YT ReVanced for Android 6.0-7.1!  
+(but it requires other Android 8.0+ device)
+
+<img src="https://user-images.githubusercontent.com/90122968/226170799-f265a265-6ddf-4143-b27c-7dcec45f26bf.png" width="240">
+
+This is not able in the original RVX patches, as ReVanced Manager cannot select versions of patches/integrations.
+
+## How to build
+See [documantation](https://github.com/kitadai31/revanced-patches/wiki/How-to-build).
+
+Other informations are also avalable on [wiki](https://github.com/kitadai31/revanced-patches-android6-7/wiki).
+
+## 🧩 Patches List
 
 ### [📦 `com.google.android.youtube`](https://play.google.com/store/apps/details?id=com.google.android.youtube)
 <details>
@@ -21,7 +40,7 @@ The official Patch bundle provided by ReVanced and the community.
 | `disable-haptic-feedback` | Disable haptic feedback when swiping. | 17.34.36 |
 | `enable-external-browser` | Use an external browser to open the url. | 17.34.36 |
 | `enable-minimized-playback` | Enables minimized and background playback. | 17.34.36 |
-| `enable-old-layout` | Spoof the YouTube client version to use the old layout. | 17.34.36 |
+| `enable-old-layout` | Spoof the YouTube client version to use the old layout. (No effect on 17.34.36) | 17.34.36 |
 | `enable-old-quality-layout` | Enables the original quality flyout menu. | 17.34.36 |
 | `enable-open-links-directly` | Bypass URL redirects (youtube.com/redirect) when opening links in video descriptions. | 17.34.36 |
 | `enable-seekbar-tapping` | Enables tap-to-seek on the seekbar of the video player. | 17.34.36 |
@@ -43,6 +62,7 @@ The official Patch bundle provided by ReVanced and the community.
 | `hide-endscreen-cards` | Hides the suggested video cards at the end of a video in fullscreen. | 17.34.36 |
 | `hide-endscreen-overlay` | Hide endscreen overlay on swipe controls. | 17.34.36 |
 | `hide-filmstrip-overlay` | Hide flimstrip overlay on swipe controls. | 17.34.36 |
+| `hide-firsttime-background-notification` | Disable notification when you launch background play for the first time. | 17.34.36 |
 | `hide-flyout-panel` | Adds options to hide player settings flyout panel. | 17.34.36 |
 | `hide-fullscreen-panels` | Hides video description and comments panel in fullscreen view. | 17.34.36 |
 | `hide-general-ads` | Hooks the method which parses the bytes into a ComponentContext to filter components. | 17.34.36 |
@@ -50,7 +70,6 @@ The official Patch bundle provided by ReVanced and the community.
 | `hide-live-chat-button` | Hides the live chat button in the video player. | 17.34.36 |
 | `hide-mix-playlists` | Removes mix playlists from home feed and video player. | 17.34.36 |
 | `hide-next-prev-button` | Hides the next prev button in the player controller. | 17.34.36 |
-| `hide-pip-notification` | Disable pip notification when you first launch pip mode. | 17.34.36 |
 | `hide-player-captions-button` | Hides the captions button in the video player. | 17.34.36 |
 | `hide-player-overlay-filter` | Remove the dark filter layer from the player's background. | 17.34.36 |
 | `hide-shorts-button` | Hides the shorts button in the navigation bar. | 17.34.36 |
@@ -73,123 +92,20 @@ The official Patch bundle provided by ReVanced and the community.
 | `settings` | Applies mandatory patches to implement ReVanced settings into the application. | 17.34.36 |
 | `sponsorblock` | Integrates SponsorBlock which allows skipping video segments such as sponsored content. | 17.34.36 |
 | `swipe-controls` | Adds volume and brightness swipe controls. | 17.34.36 |
+| `switch-create-notification` | Switching the create button and notification button. | 17.34.36 |
 | `theme` | Applies a custom theme (default: amoled). | 17.34.36 |
 | `translations` | Add Crowdin Translations. | 17.34.36 |
 </details>
 
+## Todo
+Reconstruction based on latest verison RVX patches (for well maintainability🔧, updated translation🌍 and new features✨)
 
+## Successor wanted!
+Embarrassingly, I'm not very familiar with reverse engineering and even programming. (but I can read a little smali. :D )  
+So I can not create new patches by myself. All my modifing are just copy and paste.
 
-## 📝 JSON Format
+If a better successor ReVanced Patches for 6.0-7.1 is emerged, I will promptly delete the repository and retire ReVanced community!
 
-This section explains the JSON format for the [patches.json](patches.json) file.
-
-The file contains an array of objects, each object representing a patch. The object contains the following properties:
-
-| key                           | description                                                                                                                                                                           |
-|-------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `name`                        | The name of the patch.                                                                                                                                                                |
-| `description`                 | The description of the patch.                                                                                                                                                         |
-| `version`                     | The version of the patch.                                                                                                                                                             |
-| `excluded`                    | Whether the patch is excluded by default. If `true`, the patch must never be included by default.                                                                                     |
-| `options`                     | An array of options for this patch.                                                                                                                                                   |
-| `options.key`                 | The key of the option.                                                                                                                                                                |
-| `options.title`               | The title of the option.                                                                                                                                                              |
-| `options.description`         | The description of the option.                                                                                                                                                        |
-| `options.required`            | Whether the option is required.                                                                                                                                                       |
-| `options.choices?`            | An array of choices of the option. This may be `null` if this option has no choices. The element type of this array may be any type. It can be a `String`, `Int` or something else.   |
-| `dependencies`                | An array of dependencies, which are patch names.                                                                                                                                      |
-| `compatiblePackages`          | An array of packages compatible with this patch.                                                                                                                                      |
-| `compatiblePackages.name`     | The name of the package.                                                                                                                                                              |
-| `compatiblePackages.versions` | An array of versions of the package compatible with this patch. If empty, all versions are seemingly compatible.                                                                      |
-
-Example:
-
-```json
-[
-  {
-    "name": "remember-video-quality",
-    "description": "Adds the ability to remember the video quality you chose in the video quality flyout.",
-    "version": "0.0.1",
-    "excluded": false,
-    "options": [],
-    "dependencies": [
-      "integrations",
-      "video-id-hook"
-    ],
-    "compatiblePackages": [
-      {
-        "name": "com.google.android.youtube",
-        "versions": [
-          "17.22.36",
-          "17.24.35",
-          "17.26.35",
-          "17.27.39",
-          "17.28.34",
-          "17.29.34",
-          "17.32.35",
-          "17.33.42"
-        ]
-      }
-    ]
-  },
-  {
-    "name": "theme",
-    "description": "Enables a custom theme.",
-    "version": "0.0.1",
-    "excluded": false,
-    "deprecated": false,
-    "options": [
-      {
-        "key": "theme",
-        "title": "Theme",
-        "description": "Select a theme.",
-        "required": true,
-        "choices": [
-          "Amoled"
-        ]
-      }
-    ],
-    "dependencies": [
-      "locale-config-fix"
-    ],
-    "compatiblePackages": [
-      {
-        "name": "com.google.android.youtube",
-        "versions": []
-      }
-    ]
-  },
-  {
-    "name": "custom-branding",
-    "description": "Changes the YouTube launcher icon and name to your choice (defaults to ReVanced).",
-    "version": "0.0.1",
-    "excluded": false,
-    "deprecated": false,
-    "options": [
-      {
-        "key": "appName",
-        "title": "Application Name",
-        "description": "The name of the application it will show on your home screen.",
-        "required": true,
-        "choices": null
-      },
-      {
-        "key": "appIconPath",
-        "title": "Application Icon Path",
-        "description": "A path to the icon of the application.",
-        "required": false,
-        "choices": null
-      }
-    ],
-    "dependencies": [
-      "locale-config-fix"
-    ],
-    "compatiblePackages": [
-      {
-        "name": "com.google.android.youtube",
-        "versions": []
-      }
-    ]
-  }
-]
-```
+## Thanks
+[@inotia00](https://github.com/inotia00) - Original ReVanced Extended developer  
+[@revanced](https://github.com/revanced) - Official ReVanced team
