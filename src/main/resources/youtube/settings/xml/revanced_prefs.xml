@@ -351,6 +351,9 @@
         <SwitchPreference android:title="@string/revanced_enable_phone_layout_title" android:key="revanced_enable_phone_layout" android:summary="@string/revanced_enable_phone_layout_summary" android:defaultValue="false" />SETTINGS: LAYOUT_SWITCH -->
         <!-- SETTINGS: ENABLE_VP9_CODEC
         <SwitchPreference android:title="@string/revanced_enable_vp9_codec_title" android:key="revanced_enable_vp9_codec" android:defaultValue="false" android:summary="@string/revanced_enable_vp9_codec_summary" />SETTINGS: ENABLE_VP9_CODEC -->
+        <!-- SETTINGS: ENABLE_PROTOBUF_SPOOF
+        <SwitchPreference android:title="@string/revanced_enable_protobuf_spoof_title" android:key="revanced_enable_protobuf_spoof" android:defaultValue="false" android:summary="@string/revanced_enable_protobuf_spoof_summary" />
+        <SwitchPreference android:title="@string/revanced_spoofing_type_title" android:key="revanced_spoofing_type" android:defaultValue="false" android:summaryOn="@string/revanced_spoofing_type_shorts" android:summaryOff="@string/revanced_spoofing_type_general" android:dependency="revanced_enable_protobuf_spoof" />SETTINGS: ENABLE_PROTOBUF_SPOOF -->
 
         <!-- SETTINGS: ABOUT
         <Preference android:title=" " android:selectable="false" android:summary="@string/pref_about_category" />
@@ -431,6 +434,7 @@
             <Preference android:title="enable-old-layout" android:summary="@string/revanced_patches_excluded" android:selectable="false"/>
             <Preference android:title="layout-switch" android:summary="@string/revanced_patches_excluded" android:selectable="false"/>
             <Preference android:title="force-vp9-codec" android:summary="@string/revanced_patches_excluded" android:selectable="false"/>
+            <Preference android:title="protobuf-spoof" android:summary="@string/revanced_patches_excluded" android:selectable="false"/>
 
             <Preference android:title=" " android:selectable="false" android:summary="@string/revanced_others_title" />
             <Preference android:title="return-youtube-dislike" android:summary="@string/revanced_patches_excluded" android:selectable="false"/>
