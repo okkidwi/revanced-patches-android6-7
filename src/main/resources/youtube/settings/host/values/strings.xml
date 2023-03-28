@@ -209,9 +209,8 @@ Is it ready to submit?"</string>
     <string name="revanced_enable_minimized_playback_summary_off">Minimized playback is disabled</string>
     <string name="revanced_enable_minimized_playback_summary_on">Minimized playback is enabled</string>
     <string name="revanced_enable_minimized_playback_title">Enable minimized playback</string>
-    <string name="revanced_enable_old_layout_summary_off">YouTube Layout will follow your Google Account status</string>
-    <string name="revanced_enable_old_layout_summary_on">Trick the YouTube version to force enable old layout</string>
-    <string name="revanced_enable_old_layout_title">Enable old layout</string>
+    <string name="revanced_enable_new_layout_summary">Trick the YouTube version to force enable new layout</string>
+    <string name="revanced_enable_new_layout_title">Enable new layout</string>
     <string name="revanced_enable_old_quality_layout_summary_off">New style quality settings are shown</string>
     <string name="revanced_enable_old_quality_layout_summary_on">Old style quality settings are shown</string>
     <string name="revanced_enable_old_quality_layout_title">Enable old style quality layout</string>
@@ -469,9 +468,10 @@ Is it ready to submit?"</string>
     <string name="revanced_player_flyout_panel_title">Player flyout panel component</string>
     <string name="revanced_reboot_warning_general">"As this is still an experimental feature, there may be other unknown issues.
 Are you sure you want to continue though?"</string>
-    <string name="revanced_reboot_warning_oldlayout">"Tricks the YouTube client version to v17.28.35 to load the old layout
+    <string name="revanced_reboot_warning_newlayout">"Tricks the YouTube client version to v18.05.40 to load the new layout.
+In the app settings, the YouTube version may be marked as v18.05.40.
 
-In the app settings, the YouTube version may be marked as v17.28.35"</string>
+It will not be reflected immediately. It takes time to receive new layout from server."</string>
     <string name="revanced_reboot_warning_phone">"Tricks the dpi to change some layouts to phone layouts.
 
 If you enable this setting, the following features are available:

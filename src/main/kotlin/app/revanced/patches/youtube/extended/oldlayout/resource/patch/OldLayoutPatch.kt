@@ -14,9 +14,9 @@ import app.revanced.patches.youtube.misc.settings.resource.patch.SettingsPatch
 import app.revanced.shared.annotation.YouTubeCompatibility
 import app.revanced.shared.util.resources.ResourceHelper
 
-@Patch(false)
-@Name("enable-old-layout")
-@Description("Spoof the YouTube client version to use the old layout. (No effect on 17.34.36)")
+@Patch
+@Name("enable-new-layout") //renamed from "enable-old-layout"
+@Description("Spoof the YouTube client version to 18.05.40 to use the new layout.")
 @DependsOn(
     [
         OldLayoutBytecodePatch::class,
@@ -41,7 +41,7 @@ class OldLayoutPatch : ResourcePatch {
 
         ResourceHelper.patchSuccess(
             context,
-            "enable-old-layout"
+            "enable-new-layout"
         )
 
         return PatchResultSuccess()
