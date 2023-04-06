@@ -40,12 +40,13 @@ Other informations are also avalable on [wiki](https://github.com/kitadai31/reva
 | `disable-haptic-feedback` | Disable haptic feedback when swiping. | 17.34.36 |
 | `enable-external-browser` | Use an external browser to open the url. | 17.34.36 |
 | `enable-minimized-playback` | Enables minimized and background playback. | 17.34.36 |
-| `enable-old-layout` | Spoof the YouTube client version to use the old layout. (No effect on 17.34.36) | 17.34.36 |
+| `enable-new-layout` | Spoof the YouTube client version to 18.05.40 to use the new layout. | 17.34.36 |
 | `enable-old-quality-layout` | Enables the original quality flyout menu. | 17.34.36 |
 | `enable-open-links-directly` | Bypass URL redirects (youtube.com/redirect) when opening links in video descriptions. | 17.34.36 |
 | `enable-seekbar-tapping` | Enables tap-to-seek on the seekbar of the video player. | 17.34.36 |
 | `enable-tablet-miniplayer` | Enables the tablet mini player layout. | 17.34.36 |
 | `enable-wide-searchbar` | Replaces the search icon with a wide search bar. This will hide the YouTube logo when active. | 17.34.36 |
+| `force-enable-new-layout` | Force spoof the YouTube client version to 18.05.40. | 17.34.36 |
 | `force-premium-heading` | Forces premium heading on the home screen. | 17.34.36 |
 | `force-vp9-codec` | Forces the VP9 codec for videos. | 17.34.36 |
 | `header-switch` | Add switch to change header. | 17.34.36 |
@@ -74,6 +75,7 @@ Other informations are also avalable on [wiki](https://github.com/kitadai31/reva
 | `hide-player-overlay-filter` | Remove the dark filter layer from the player's background. | 17.34.36 |
 | `hide-shorts-button` | Hides the shorts button in the navigation bar. | 17.34.36 |
 | `hide-shorts-component` | Hides other Shorts components. | 17.34.36 |
+| `hide-shorts-pivot-bar` | Hides the bottom navigation tabs when playing shorts. | 17.34.36 |
 | `hide-snackbar` | Hides the snackbar action popup. | 17.34.36 |
 | `hide-startup-shorts-player` | Disables playing YouTube Shorts when launching YouTube. | 17.34.36 |
 | `hide-stories` | Hides YouTube Stories shelf on the feed. | 17.34.36 |
@@ -87,6 +89,7 @@ Other informations are also avalable on [wiki](https://github.com/kitadai31/reva
 | `optimize-resource` | Removes duplicate resources and adds missing translation files from YouTube. | 17.34.36 |
 | `overlay-buttons` | Add overlay buttons for ReVanced Extended. | 17.34.36 |
 | `patch-options` | Create an options.toml file. | 17.34.36 |
+| `protobuf-spoof` | Spoofs the protobuf to prevent playback issues. | 17.34.36 |
 | `remove-player-button-background` | Removes the background from the video player buttons. | 17.34.36 |
 | `return-youtube-dislike` | Shows the dislike count of videos using the Return YouTube Dislike API. | 17.34.36 |
 | `settings` | Applies mandatory patches to implement ReVanced settings into the application. | 17.34.36 |
