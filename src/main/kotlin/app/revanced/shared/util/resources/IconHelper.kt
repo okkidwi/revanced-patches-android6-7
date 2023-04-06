@@ -1,6 +1,7 @@
 package app.revanced.shared.util.resources
 
 import app.revanced.patcher.data.ResourceContext
+import app.revanced.shared.util.FileCopyCompat
 import java.nio.file.Files
 import java.nio.file.StandardCopyOption
 import org.w3c.dom.Element
@@ -65,83 +66,6 @@ internal object IconHelper {
         }
     }
 
-    fun customIconMusic(
-        context: ResourceContext,
-        iconName: String
-    ) {
-        val launchIcon = arrayOf(
-            "adaptiveproduct_youtube_music_background_color_108",
-            "adaptiveproduct_youtube_music_foreground_color_108",
-            "ic_launcher_release"
-        )
-
-        copyResources(
-            context,
-            "music",
-            iconName,
-            "launchericon",
-            "mipmap",
-            launchIcon
-        )
-
-        monochromeIcon(
-            context,
-            "music",
-            "ic_app_icons_themed_youtube_music",
-            iconName
-        )
-    }
-
-    fun customIconMusicAdditional(
-        context: ResourceContext,
-        iconName: String
-    ) {
-        val record = arrayOf(
-            "hdpi",
-            "large-hdpi",
-            "large-mdpi",
-            "large-xhdpi",
-            "mdpi",
-            "xhdpi",
-            "xlarge-hdpi",
-            "xlarge-mdpi",
-            "xxhdpi"
-        )
-
-        val actionbarLogo = arrayOf(
-            "hdpi",
-            "mdpi",
-            "xhdpi",
-            "xxhdpi",
-            "xxxhdpi"
-        )
-
-        val actionbarLogoRelease = arrayOf(
-            "hdpi"
-        )
-
-        copyMusicResources(
-            context,
-            iconName,
-            record,
-            "record"
-        )
-
-        copyMusicResources(
-            context,
-            iconName,
-            actionbarLogo,
-            "action_bar_logo"
-        )
-
-        copyMusicResources(
-            context,
-            iconName,
-            actionbarLogoRelease,
-            "action_bar_logo_release"
-        )
-    }
-
     private fun copyResources(
         context: ResourceContext,
         appName: String,
@@ -158,11 +82,18 @@ internal object IconHelper {
             "mdpi"
         ).forEach { size ->
             iconArray.forEach iconLoop@{ name ->
-                Files.copy(
-                    this.javaClass.classLoader.getResourceAsStream("$appName/branding/$iconName/$iconPath/$size/$name.png")!!,
-                    context["res"].resolve("$directory-$size").resolve("$name.png").toPath(),
-                    StandardCopyOption.REPLACE_EXISTING
-                )
+                try {
+                    Files.copy(
+                        this.javaClass.classLoader.getResourceAsStream("$appName/branding/$iconName/$iconPath/$size/$name.png")!!,
+                        context["res"].resolve("$directory-$size").resolve("$name.png").toPath(),
+                        StandardCopyOption.REPLACE_EXISTING
+                    )
+                } catch (e: NoSuchMethodError) {
+                    FileCopyCompat.copy(
+                        this.javaClass.classLoader.getResourceAsStream("$appName/branding/$iconName/$iconPath/$size/$name.png")!!,
+                        context["res"].resolve("$directory-$size").resolve("$name.png")
+                    )
+                }
             }
         }
     }
@@ -175,28 +106,18 @@ internal object IconHelper {
     ){
         try {
             val relativePath = "drawable/$monochromeIconName.xml"
-            Files.copy(
-                this.javaClass.classLoader.getResourceAsStream("$appName/branding/$iconName/monochromeicon/$relativePath")!!,
-                context["res"].resolve(relativePath).toPath(),
-                StandardCopyOption.REPLACE_EXISTING
-            )
+            try {
+                Files.copy(
+                    this.javaClass.classLoader.getResourceAsStream("$appName/branding/$iconName/monochromeicon/$relativePath")!!,
+                    context["res"].resolve(relativePath).toPath(),
+                    StandardCopyOption.REPLACE_EXISTING
+                )
+            } catch (e: NoSuchMethodError) {
+                FileCopyCompat.copy(
+                    this.javaClass.classLoader.getResourceAsStream("$appName/branding/$iconName/monochromeicon/$relativePath")!!,
+                    context["res"].resolve(relativePath)
+                )
+            }
         } catch (_: Exception) {}
-    }
-
-    private fun copyMusicResources(
-        context: ResourceContext,
-        iconName: String,
-        iconArray: Array<String>,
-        resourceNames: String
-    ){
-        iconArray.forEach { path ->
-            val relativePath = "drawable-$path/$resourceNames.png"
-
-            Files.copy(
-                this.javaClass.classLoader.getResourceAsStream("music/branding/$iconName/resource/$relativePath")!!,
-                context["res"].resolve(relativePath).toPath(),
-                StandardCopyOption.REPLACE_EXISTING
-            )
-        }
     }
 }

@@ -1,6 +1,7 @@
 package app.revanced.shared.util.resources
 
 import app.revanced.patcher.data.ResourceContext
+import app.revanced.shared.util.FileCopyCompat
 import java.nio.file.Files
 import java.nio.file.StandardCopyOption
 import org.w3c.dom.Element
@@ -216,11 +217,18 @@ internal object ResourceHelper {
 
             context["res/$directory"].mkdir()
 
-            Files.copy(
-                this.javaClass.classLoader.getResourceAsStream("$sourceDirectory/translations/$relativePath")!!,
-                context["res"].resolve("$directory/strings.xml").toPath(),
-                StandardCopyOption.REPLACE_EXISTING
-            )
+            try {
+                Files.copy(
+                    this.javaClass.classLoader.getResourceAsStream("$sourceDirectory/translations/$relativePath")!!,
+                    context["res"].resolve("$directory/strings.xml").toPath(),
+                    StandardCopyOption.REPLACE_EXISTING
+                )
+            } catch (e: NoSuchMethodError) {
+                FileCopyCompat.copy(
+                    this.javaClass.classLoader.getResourceAsStream("$sourceDirectory/translations/$relativePath")!!,
+                    context["res"].resolve("$directory/strings.xml")
+                )
+            }
         }
     }
 

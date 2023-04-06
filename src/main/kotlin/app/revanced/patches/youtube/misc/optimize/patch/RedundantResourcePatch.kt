@@ -8,13 +8,11 @@ import app.revanced.patcher.patch.PatchResult
 import app.revanced.patcher.patch.PatchResultSuccess
 import app.revanced.patcher.patch.ResourcePatch
 import app.revanced.shared.annotation.YouTubeCompatibility
+import app.revanced.shared.util.FileCopyCompat
 import app.revanced.shared.util.resources.ResourceUtils
 import app.revanced.shared.util.resources.ResourceUtils.copyResources
-import java.io.File
 import java.nio.file.Files
-import java.nio.file.Path
 import java.nio.file.StandardCopyOption
-import java.util.Comparator
 
 @Name("remove-duplicate-resource-patch")
 @Description("Removes duplicate resources from YouTube.")
@@ -31,28 +29,31 @@ class RedundantResourcePatch : ResourcePatch {
             WHITELIST_XXXHDPI
         ).forEach { (path, array) ->
             val tmpDirectory = path + "-v21"
-            Files.createDirectory(context["res"].resolve(tmpDirectory).toPath())
+            context["res"].resolve(tmpDirectory).mkdir()
 
             (WHITELIST_GENERAL + array).forEach { name ->
                 try {
-                    Files.copy(
+                    try {
+                        Files.copy(
                             context["res"].resolve("$path/$name").toPath(),
                             context["res"].resolve("$tmpDirectory/$name").toPath(),
                             StandardCopyOption.REPLACE_EXISTING
-                    )
+                        )
+                    } catch (e: NoSuchMethodError) {
+                        FileCopyCompat.copy(
+                            context["res"].resolve("$path/$name"),
+                            context["res"].resolve("$tmpDirectory/$name")
+                        )
+                    }
                 } catch (_: Exception) {}
             }
             val directoryPath = context["res"].resolve(path)
 
-            Files.walk(directoryPath.toPath())
-                    .map(Path::toFile)
-                    .sorted(Comparator.reverseOrder())
-                    .forEach(File::delete)
+            directoryPath.listFiles()?.forEach { it.delete() }
+            directoryPath.delete()
 
-            Files.move(
-                    context["res"].resolve(tmpDirectory).toPath(),
-                    context["res"].resolve(path).toPath()
-            )
+            // move
+            context["res"].resolve(tmpDirectory).renameTo(context["res"].resolve(path))
         }
 
         context.copyResources(

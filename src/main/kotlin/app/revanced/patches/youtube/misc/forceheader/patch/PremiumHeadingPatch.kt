@@ -12,10 +12,10 @@ import app.revanced.patcher.patch.PatchResultSuccess
 import app.revanced.patcher.patch.ResourcePatch
 import app.revanced.patches.youtube.misc.settings.resource.patch.SettingsPatch
 import app.revanced.shared.annotation.YouTubeCompatibility
+import app.revanced.shared.util.FileCopyCompat
 import app.revanced.shared.util.resources.ResourceHelper
 import java.nio.file.Files
 import java.nio.file.StandardCopyOption
-import kotlin.io.path.exists
 
 @Patch(false)
 @Name("force-premium-heading")
@@ -34,16 +34,23 @@ class PremiumHeadingPatch : ResourcePatch {
         arrayOf("xxxhdpi", "xxhdpi", "xhdpi", "hdpi", "mdpi").forEach { size ->
             val headingDirectory = resDirectory.resolve("drawable-$size")
             modes.forEach { mode ->
-                val fromPath = headingDirectory.resolve("${original}_$mode.png").toPath()
-                val toPath = headingDirectory.resolve("${replacement}_$mode.png").toPath()
+                val fromFile = headingDirectory.resolve("${original}_$mode.png")
+                val toFile = headingDirectory.resolve("${replacement}_$mode.png")
 
-                if (!fromPath.exists())
-                    return PatchResultError("The file $fromPath does not exist in the resources. Therefore, this patch can not succeed.")
-                Files.copy(
-                    fromPath,
-                    toPath,
-                    StandardCopyOption.REPLACE_EXISTING
-                )
+                if (!fromFile.exists())
+                    return PatchResultError("The file $fromFile does not exist in the resources. Therefore, this patch can not succeed.")
+                try {
+                    Files.copy(
+                        fromFile.toPath(),
+                        toFile.toPath(),
+                        StandardCopyOption.REPLACE_EXISTING
+                    )
+                } catch (e: NoSuchMethodError) {
+                    FileCopyCompat.copy(
+                        fromFile,
+                        toFile
+                    )
+                }
             }
         }
 

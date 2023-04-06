@@ -2,6 +2,7 @@ package app.revanced.shared.util.resources
 
 import app.revanced.patcher.data.DomFileEditor
 import app.revanced.patcher.data.ResourceContext
+import app.revanced.shared.util.FileCopyCompat
 import java.nio.file.Files
 import java.nio.file.StandardCopyOption
 
@@ -18,10 +19,18 @@ internal object ResourceUtils {
         for (resourceGroup in resources) {
             resourceGroup.resources.forEach { resource ->
                 val resourceFile = "${resourceGroup.resourceDirectoryName}/$resource"
-                Files.copy(
-                    classLoader.getResourceAsStream("$sourceResourceDirectory/$resourceFile")!!,
-                    targetResourceDirectory.resolve(resourceFile).toPath(), StandardCopyOption.REPLACE_EXISTING
-                )
+                try {
+                    Files.copy(
+                        classLoader.getResourceAsStream("$sourceResourceDirectory/$resourceFile")!!,
+                        targetResourceDirectory.resolve(resourceFile).toPath(),
+                        StandardCopyOption.REPLACE_EXISTING
+                    )
+                } catch (e: NoSuchMethodError) {
+                    FileCopyCompat.copy(
+                        classLoader.getResourceAsStream("$sourceResourceDirectory/$resourceFile")!!,
+                        targetResourceDirectory.resolve(resourceFile)
+                    )
+                }
             }
         }
     }
