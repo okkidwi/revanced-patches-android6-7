@@ -1,3 +1,7 @@
+<p align="center"><b>English</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/kitadai31/revanced-patches-android6-7/wiki/README_JP">日　本　語</a></p>
+
+Sorry! The English version is currently under construction. If you are unfortunate enough to visit this page now, please Google translate the Japanese version.
+
 # YouTube ReVanced for Android 6.0-7.1
 An unofficial ReVanced Extended for YouTube 17.34.36.  
 Based on inotia00's ReVanced Extended [v2.160.1](https://github.com/inotia00/revanced-patches/releases/tag/v2.160.1)
@@ -110,5 +114,5 @@ So I can not create new patches by myself. All my modifing are just copy and pas
 If a better successor ReVanced Patches for 6.0-7.1 is emerged, I will promptly delete the repository and retire ReVanced community!
 
 ## Thanks
-[@inotia00](https://github.com/inotia00) - Original ReVanced Extended developer  
-[@revanced](https://github.com/revanced) - Official ReVanced team
+[@inotia00](https://github.com/inotia00)  
+[@revanced](https://github.com/revanced)
