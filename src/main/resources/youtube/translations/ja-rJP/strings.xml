@@ -226,9 +226,9 @@
     <string name="revanced_enable_open_links_directly_summary_off">概要欄からリンクを開いた時、リダイレクト(youtube.com/redirect)を回避して直リンクで開きます</string>
     <string name="revanced_enable_open_links_directly_summary_on">概要欄からリンクを開いた時、リダイレクト(youtube.com/redirect)を回避して直リンクで開きます</string>
     <string name="revanced_enable_open_links_directly_title">直リンクを有効にする</string>
-    <string name="revanced_enable_press_to_swipe_summary_off">スワイプコントロールを有効にします</string>
-    <string name="revanced_enable_press_to_swipe_summary_on">スワイプコントロールを有効にします</string>
-    <string name="revanced_enable_press_to_swipe_title">スワイプコントロールを有効にする</string>
+    <string name="revanced_enable_press_to_swipe_summary_off">長押し時のみスワイプコントロールを有効にします</string>
+    <string name="revanced_enable_press_to_swipe_summary_on">長押し時のみスワイプコントロールを有効にします</string>
+    <string name="revanced_enable_press_to_swipe_title">長押ししてスワイプコントロール</string>
     <string name="revanced_enable_phone_layout_summary">一部のスマホ用のレイアウトを使用できるように dpi を偽装します</string>
     <string name="revanced_enable_phone_layout_title">スマートフォン用のレイアウトを有効にする</string>
     <string name="revanced_enable_seekbar_tapping_summary_off">シークバーのタップを有効にします</string>
