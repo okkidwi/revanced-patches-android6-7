@@ -1,29 +1,29 @@
 <p align="center"><b>English</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/kitadai31/revanced-patches-android6-7/wiki/README_JP">日　本　語</a></p>
 
-Sorry! The English version is currently under construction. If you are unfortunate enough to visit this page now, please Google translate the Japanese version.
-
 # YouTube ReVanced for Android 6.0-7.1
 An unofficial ReVanced Extended for YouTube 17.34.36.  
 Based on inotia00's ReVanced Extended [v2.160.1](https://github.com/inotia00/revanced-patches/releases/tag/v2.160.1)
 
-## About
-The last YouTube app available on Android 6 & 7 is v17.34.36.
+## Overview
+The last YouTube app available on Android 6 or 7 is **17.34.36**, but the latest ReVanced and ReVanced Extended are not compatible with 17.34.36.
 
-On the other hand, latest ReVanced and RVX patches don't support YouTube 17.34.36, but RVX v2.160.1 is the last version in which most of features work properly.
+However, until ReVanced Extended **v2.160.1**, most of patches worked properly, even though they weren't officially supported.
 
-So I forked ReVanced Extended patches v2.160.1 and fixed some patches and backported some features for Android 6.0-7.1 users.
+So I forked RVX 2.160.1 and released this unofficial (yet another) ReVanced Patches for YouTube 17.34.36.  
+I fixed some issues in 2.160.1 and backported some features (**including protobuf-spoof**) from the new version.
 
-Because I released this on the GitHub repository, which means that you can use ReVanced Manager to build YT ReVanced for Android 6.0-7.1!  
-(but it requires other Android 8.0+ device)
+Also, I have successfully made ReVanced Manager work on Android 6.0-7.1.  
+So you can build it as easily as regular ReVanced and without Termux!
+https://github.com/kitadai31/revanced-manager-android6-7
 
-<img src="https://user-images.githubusercontent.com/90122968/226170799-f265a265-6ddf-4143-b27c-7dcec45f26bf.png" width="240">
-
-This is not able in the original RVX patches, as ReVanced Manager cannot select versions of patches/integrations.
+> However, due to stability and performance issues, if you have another newer device, you may want to use it.  
+>
+> For this "revanced-patches-android6-7" I have confirmed that the patch completes successfully on my main smartphone (Snapdragon 410, 2GB RAM, Android 7.1.1), but it took **45 minutes** to complete.
 
 ## How to build
-See [documantation](https://github.com/kitadai31/revanced-patches/wiki/How-to-build).
+See [[How to build]](https://github.com/kitadai31/revanced-patches/wiki/How-to-build) page in documentations.
 
-Other informations are also avalable on [wiki](https://github.com/kitadai31/revanced-patches-android6-7/wiki).
+Other informations are also avalable on [[documentations]](https://github.com/kitadai31/revanced-patches-android6-7/wiki) (GitHub Wiki).
 
 ## 🧩 Patches List
 
@@ -104,15 +104,25 @@ Other informations are also avalable on [wiki](https://github.com/kitadai31/reva
 | `translations` | Add Crowdin Translations. | 17.34.36 |
 </details>
 
+## Issue
+For suggestions and bug reports, open an issue.
+
+## About "Discussions" page
+This repositly uses [GitHub Discussions](https://github.com/kitadai31/revanced-patches-android6-7/discussions).  
+It can be used for questions, supports, announcements, etc.
+
 ## Todo
-Reconstruction based on latest verison RVX patches (for well maintainability🔧, updated translation🌍 and new features✨)
+I would like to quit developing based on 2.160.1 and remake it based on the latest RVX. (for well maintainability🔧, updated translation🌍 and new features✨)
 
-## Successor wanted!
-Embarrassingly, I'm not very familiar with reverse engineering and even programming. (but I can read a little smali. :D )  
-So I can not create new patches by myself. All my modifing are just copy and paste.
+## I have skill issue...
+Embarrassingly, I'm not very familiar with reverse engineering and also programming. (But I can read a little smali :D )  
+So I can not create new patches by myself. All my modifing are marely copy and paste.
 
-If a better successor ReVanced Patches for 6.0-7.1 is emerged, I will promptly delete the repository and retire ReVanced community!
+If anyone else is interested in developing a ReVanced Patches for YouTube 17.34.36 besides me, please don't hesitate to release it!  
+If a more excellent ReVanced Patches for YouTube 17.34.36 is emerged, I will immediately stop releasing my one and introduce yours!
 
-## Thanks
+Also all contributions are welcomed!
+
+## Credits
 [@inotia00](https://github.com/inotia00)  
 [@revanced](https://github.com/revanced)
