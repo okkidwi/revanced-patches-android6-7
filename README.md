@@ -13,7 +13,7 @@ So I forked RVX 2.160.1 and released this unofficial (yet another) ReVanced Patc
 I fixed some issues in 2.160.1 and backported some features (**including protobuf-spoof**) from the new version.
 
 Also, I have successfully made ReVanced Manager work on Android 6.0-7.1.  
-So you can build it as easily as regular ReVanced and without Termux!
+So you can build it as easily as regular ReVanced and without Termux!  
 https://github.com/kitadai31/revanced-manager-android6-7
 
 > However, due to stability and performance issues, if you have another newer device, you may want to use it.  
