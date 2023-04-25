@@ -65,7 +65,7 @@ body:
       description: Add your device environment.
       placeholder: Android 7.1, MIUI 14 ...
     validations:
-      required: ture
+      required: true
   - type: checkboxes
     id: acknowledgements
     attributes:
