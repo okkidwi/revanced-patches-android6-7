@@ -98,8 +98,8 @@
 
             <!-- SETTINGS: HIDE_SHORTS_PLAYER_PIVOT_BAR
             <Preference android:title=" " android:selectable="false" android:summary="@string/revanced_experimental_flag" />
-            <SwitchPreference android:title="@string/revanced_hide_shorts_player_pivot_bar_type_a_title" android:key="revanced_hide_shorts_player_pivot_bar_type_a" android:defaultValue="false" android:summary="@string/revanced_hide_shorts_player_pivot_bar_type_a_summary" />
-            <SwitchPreference android:title="@string/revanced_hide_shorts_player_pivot_bar_type_b_title" android:key="revanced_hide_shorts_player_pivot_bar_type_b" android:defaultValue="false" android:summary="@string/revanced_hide_shorts_player_pivot_bar_type_b_summary" />SETTINGS: HIDE_SHORTS_PLAYER_PIVOT_BAR -->
+            <SwitchPreference android:title="@string/revanced_hide_shorts_player_pivot_bar_title" android:key="revanced_hide_shorts_player_pivot_bar" android:defaultValue="false" android:summary="@string/revanced_hide_shorts_player_pivot_bar_summary" />
+            <Preference android:title="@string/revanced_hide_shorts_player_pivot_bar_another_method_title" android:summary="@string/revanced_hide_shorts_player_pivot_bar_another_method_summary" />SETTINGS: HIDE_SHORTS_PLAYER_PIVOT_BAR -->
 
         <!-- SETTINGS: SHORTS_COMPONENT.PARENT
         </PreferenceScreen>SETTINGS: SHORTS_COMPONENT.PARENT -->

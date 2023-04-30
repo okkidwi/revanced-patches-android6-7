@@ -15,8 +15,8 @@ import app.revanced.shared.annotation.YouTubeCompatibility
 import app.revanced.shared.util.resources.ResourceHelper
 
 @Patch
-@Name("hide-shorts-pivot-bar")
-@Description("Hides the bottom navigation tabs when playing shorts.")
+@Name("hide-shorts-navbar")
+@Description("Hide navigation bar when playing shorts.")
 @DependsOn(
     [
         SettingsPatch::class,
@@ -43,7 +43,7 @@ class ShortsPivotBarPatch : ResourcePatch {
 
         ResourceHelper.patchSuccess(
             context,
-            "hide-shorts-pivot-bar"
+            "hide-shorts-navbar"
         )
 
         return PatchResultSuccess()
