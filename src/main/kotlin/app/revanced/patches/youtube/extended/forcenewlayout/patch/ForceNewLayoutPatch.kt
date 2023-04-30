@@ -11,14 +11,14 @@ import app.revanced.patcher.patch.PatchResultSuccess
 import app.revanced.patcher.patch.annotations.DependsOn
 import app.revanced.patcher.patch.annotations.Patch
 import app.revanced.patches.youtube.extended.forcenewlayout.fingerprints.ForceNewLayoutFingerprint
-import app.revanced.patches.youtube.extended.oldlayout.resource.patch.OldLayoutPatch
+import app.revanced.patches.youtube.extended.spoofversion.resource.patch.SpoofAppVersion
 import app.revanced.shared.annotation.YouTubeCompatibility
 import app.revanced.shared.extensions.toErrorResult
 
 @Patch(false)
 @Name("force-enable-new-layout")
 @Description("Force spoof the YouTube client version to 18.05.40.")
-@DependsOn([OldLayoutPatch::class])
+@DependsOn([SpoofAppVersion::class])
 @YouTubeCompatibility
 @Version("0.0.1")
 class ForceNewLayoutPatch : BytecodePatch(

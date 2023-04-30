@@ -349,8 +349,10 @@
 
         <!-- SETTINGS: EXPERIMENTAL_FLAGS
         <Preference android:title=" " android:selectable="false" android:key="revanced_experimental_flag" android:summary="@string/revanced_experimental_flag" />SETTINGS: EXPERIMENTAL_FLAGS -->
-        <!-- SETTINGS: ENABLE_OLD_LAYOUT
-        <SwitchPreference android:title="@string/revanced_enable_new_layout_title" android:key="revanced_enable_old_layout" android:defaultValue="false" android:summary="@string/revanced_enable_new_layout_summary" />SETTINGS: ENABLE_OLD_LAYOUT -->
+        <!-- SETTINGS: SPOOF_APP_VERSION
+        <EditTextPreference android:title="@string/revanced_spoof_app_version_title" android:key="revanced_version_number_to_spoof" android:summary="@string/revanced_spoof_app_version_summary" android:defaultValue="" android:hint="18.05.40" android:inputType="text" />
+        <Preference android:selectable="false" android:summary="@string/revanced_spoof_app_version_details_1" />
+        <Preference android:selectable="false" android:summary="@string/revanced_spoof_app_version_details_2" />SETTINGS: SPOOF_APP_VERSION -->
         <!-- SETTINGS: LAYOUT_SWITCH
         <SwitchPreference android:title="@string/revanced_enable_tablet_layout_title" android:key="revanced_enable_tablet_layout" android:summary="@string/revanced_enable_tablet_layout_summary" android:defaultValue="false" />
         <SwitchPreference android:title="@string/revanced_enable_phone_layout_title" android:key="revanced_enable_phone_layout" android:summary="@string/revanced_enable_phone_layout_summary" android:defaultValue="false" />SETTINGS: LAYOUT_SWITCH -->
@@ -435,7 +437,7 @@
             <Preference android:title="overlay-buttons" android:summary="@string/revanced_patches_excluded" android:selectable="false"/>
 
             <Preference android:title=" " android:selectable="false" android:summary="@string/revanced_extended_title" />
-            <Preference android:title="enable-new-layout" android:summary="@string/revanced_patches_excluded" android:selectable="false"/>
+            <Preference android:title="spoof-app-version" android:summary="@string/revanced_patches_excluded" android:selectable="false"/>
             <Preference android:title="layout-switch" android:summary="@string/revanced_patches_excluded" android:selectable="false"/>
             <Preference android:title="force-vp9-codec" android:summary="@string/revanced_patches_excluded" android:selectable="false"/>
             <Preference android:title="protobuf-spoof" android:summary="@string/revanced_patches_excluded" android:selectable="false"/>

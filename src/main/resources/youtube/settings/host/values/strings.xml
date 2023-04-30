@@ -209,8 +209,6 @@ Is it ready to submit?"</string>
     <string name="revanced_enable_minimized_playback_summary_off">Minimized playback is disabled</string>
     <string name="revanced_enable_minimized_playback_summary_on">Minimized playback is enabled</string>
     <string name="revanced_enable_minimized_playback_title">Enable minimized playback</string>
-    <string name="revanced_enable_new_layout_summary">Trick the YouTube version to force enable new layout</string>
-    <string name="revanced_enable_new_layout_title">Enable new layout</string>
     <string name="revanced_enable_old_quality_layout_summary_off">New style quality settings are shown</string>
     <string name="revanced_enable_old_quality_layout_summary_on">Old style quality settings are shown</string>
     <string name="revanced_enable_old_quality_layout_title">Enable old style quality layout</string>
@@ -468,10 +466,6 @@ Is it ready to submit?"</string>
     <string name="revanced_player_flyout_panel_title">Player flyout panel component</string>
     <string name="revanced_reboot_warning_general">"As this is still an experimental feature, there may be other unknown issues.
 Are you sure you want to continue though?"</string>
-    <string name="revanced_reboot_warning_newlayout">"Tricks the YouTube client version to v18.05.40 to load the new layout.
-In the app settings, the YouTube version may be marked as v18.05.40.
-
-It will not be reflected immediately. It takes time to receive new layout from server."</string>
     <string name="revanced_reboot_warning_phone">"Tricks the dpi to change some layouts to phone layouts.
 
 If you enable this setting, the following features are available:
@@ -645,4 +639,8 @@ For example, in search results, Shorts videos are treated as normal videos.
 
 It will not be reflected immediately. It takes time to receive old layout from server."</string>
     <string name="revanced_protobuf_spoof_notice">Spoofing protobuf to prevent playback issues</string>
+    <string name="revanced_spoof_app_version_title">Spoof app version</string>
+    <string name="revanced_spoof_app_version_summary">Tricks the YouTube client version to enable the new layout or restore old layout.\nEmpty = Do not spoof.\nAfter changing this setting, please restart the app manually!!!</string>
+    <string name="revanced_spoof_app_version_details_1">Spoofing version examples:\n18.05.40 = Enable new layout  (KNOWN ISSUE: The app crashes when opening the description in some videos)\n17.06.34 = Restore \"Sort by oldest\" future, Hide bottom navigation tab while watching shorts  (Side effect: RYD is not available)\n16.20.35 = Disable material you\n16.01.35 = Restore explore tab</string>
+    <string name="revanced_spoof_app_version_details_2">Notes:\nThis will change the appearance of the app, but unknown side effects may occur.\nIn the app settings, the YouTube version will be marked as this version.\nThis will not be reflected immediately. Sometimes, it takes hours to receive new layout from server. Please restart the app several times.\nIf you want to reset immediately, please clear the app data or log out.</string>
 </resources>
