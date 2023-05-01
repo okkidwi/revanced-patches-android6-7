@@ -7,18 +7,19 @@ Based on inotia00's ReVanced Extended [v2.160.1](https://github.com/inotia00/rev
 ## Overview
 The last YouTube app available on Android 6 or 7 is **17.34.36**, but the latest ReVanced and ReVanced Extended are not compatible with 17.34.36.
 
-However, until ReVanced Extended **v2.160.1**, most of patches worked properly, even though they weren't officially supported.
+However, until ReVanced Extended **v2.160.1**, most of patches worked properly, although not officially supported.
 
 So I forked RVX 2.160.1 and released this unofficial (yet another) ReVanced Patches for YouTube 17.34.36.  
-I fixed some issues in 2.160.1 and backported some features (**including protobuf-spoof**) from the new version.
+I fixed some issues in 2.160.1 and backported some features (**including protobuf-spoof**) from newer version.
 
-Also, I have successfully made ReVanced Manager work on Android 6.0-7.1.  
+Furthermore, I have successfully made ReVanced Manager work on Android 7.x.  
 So you can build it as easily as regular ReVanced and without Termux!  
-https://github.com/kitadai31/revanced-manager-android6-7
+https://github.com/kitadai31/revanced-manager-android7  
+(For Android 6.0, please build in another way.)
 
 > However, due to stability and performance issues, if you have another newer device, you may want to use it.  
 >
-> For this "revanced-patches-android6-7" I have confirmed that the patch completes successfully on my main smartphone (Snapdragon 410, 2GB RAM, Android 7.1.1), but it took **45 minutes** to complete.
+> For this "revanced-patches-android6-7" I have checked that the patch completes successfully on my main smartphone (Snapdragon 410, 2GB RAM, Android 7.1.1), but it took **45 minutes** to complete.
 
 ## How to build
 See [[How to build]](https://github.com/kitadai31/revanced-patches/wiki/How-to-build) page in documentations.
@@ -44,13 +45,11 @@ Other informations are also avalable on [[documentations]](https://github.com/ki
 | `disable-haptic-feedback` | Disable haptic feedback when swiping. | 17.34.36 |
 | `enable-external-browser` | Use an external browser to open the url. | 17.34.36 |
 | `enable-minimized-playback` | Enables minimized and background playback. | 17.34.36 |
-| `enable-new-layout` | Spoof the YouTube client version to 18.05.40 to use the new layout. | 17.34.36 |
 | `enable-old-quality-layout` | Enables the original quality flyout menu. | 17.34.36 |
 | `enable-open-links-directly` | Bypass URL redirects (youtube.com/redirect) when opening links in video descriptions. | 17.34.36 |
 | `enable-seekbar-tapping` | Enables tap-to-seek on the seekbar of the video player. | 17.34.36 |
 | `enable-tablet-miniplayer` | Enables the tablet mini player layout. | 17.34.36 |
 | `enable-wide-searchbar` | Replaces the search icon with a wide search bar. This will hide the YouTube logo when active. | 17.34.36 |
-| `force-enable-new-layout` | Force spoof the YouTube client version to 18.05.40. | 17.34.36 |
 | `force-premium-heading` | Forces premium heading on the home screen. | 17.34.36 |
 | `force-vp9-codec` | Forces the VP9 codec for videos. | 17.34.36 |
 | `header-switch` | Add switch to change header. | 17.34.36 |
@@ -79,7 +78,7 @@ Other informations are also avalable on [[documentations]](https://github.com/ki
 | `hide-player-overlay-filter` | Remove the dark filter layer from the player's background. | 17.34.36 |
 | `hide-shorts-button` | Hides the shorts button in the navigation bar. | 17.34.36 |
 | `hide-shorts-component` | Hides other Shorts components. | 17.34.36 |
-| `hide-shorts-pivot-bar` | Hides the bottom navigation tabs when playing shorts. | 17.34.36 |
+| `hide-shorts-navbar` | Hide navigation bar when playing shorts. | 17.34.36 |
 | `hide-snackbar` | Hides the snackbar action popup. | 17.34.36 |
 | `hide-startup-shorts-player` | Disables playing YouTube Shorts when launching YouTube. | 17.34.36 |
 | `hide-stories` | Hides YouTube Stories shelf on the feed. | 17.34.36 |
@@ -98,6 +97,7 @@ Other informations are also avalable on [[documentations]](https://github.com/ki
 | `return-youtube-dislike` | Shows the dislike count of videos using the Return YouTube Dislike API. | 17.34.36 |
 | `settings` | Applies mandatory patches to implement ReVanced settings into the application. | 17.34.36 |
 | `sponsorblock` | Integrates SponsorBlock which allows skipping video segments such as sponsored content. | 17.34.36 |
+| `spoof-app-version` | Spoof the YouTube client version to enable the new layout or restore old layout. | 17.34.36 |
 | `swipe-controls` | Adds volume and brightness swipe controls. | 17.34.36 |
 | `switch-create-notification` | Switching the create button and notification button. | 17.34.36 |
 | `theme` | Applies a custom theme (default: amoled). | 17.34.36 |
@@ -108,7 +108,7 @@ Other informations are also avalable on [[documentations]](https://github.com/ki
 For suggestions and bug reports, open an issue.
 
 ## About "Discussions" page
-This repositly uses [GitHub Discussions](https://github.com/kitadai31/revanced-patches-android6-7/discussions).  
+This repository uses [GitHub Discussions](https://github.com/kitadai31/revanced-patches-android6-7/discussions).  
 It can be used for questions, supports, announcements, etc.
 
 ## Todo
@@ -116,7 +116,7 @@ I would like to quit developing based on 2.160.1 and remake it based on the late
 
 ## I have skill issue...
 Embarrassingly, I'm not very familiar with reverse engineering and also programming. (But I can read a little smali :D )  
-So I can not create new patches by myself. All my modifing are marely copy and paste.
+So I can not create new patches by myself. All my modifying are merely copy and paste.
 
 If anyone else is interested in developing a ReVanced Patches for YouTube 17.34.36 besides me, please don't hesitate to release it!  
 If a more excellent ReVanced Patches for YouTube 17.34.36 is emerged, I will immediately stop releasing my one and introduce yours!
