@@ -349,10 +349,6 @@
 
         <!-- SETTINGS: EXPERIMENTAL_FLAGS
         <Preference android:title=" " android:selectable="false" android:key="revanced_experimental_flag" android:summary="@string/revanced_experimental_flag" />SETTINGS: EXPERIMENTAL_FLAGS -->
-        <!-- SETTINGS: SPOOF_APP_VERSION
-        <EditTextPreference android:title="@string/revanced_spoof_app_version_title" android:key="revanced_version_number_to_spoof" android:summary="@string/revanced_spoof_app_version_summary" android:defaultValue="" android:hint="18.05.40" android:inputType="text" />
-        <Preference android:selectable="false" android:summary="@string/revanced_spoof_app_version_details_1" />
-        <Preference android:selectable="false" android:summary="@string/revanced_spoof_app_version_details_2" />SETTINGS: SPOOF_APP_VERSION -->
         <!-- SETTINGS: LAYOUT_SWITCH
         <SwitchPreference android:title="@string/revanced_enable_tablet_layout_title" android:key="revanced_enable_tablet_layout" android:summary="@string/revanced_enable_tablet_layout_summary" android:defaultValue="false" />
         <SwitchPreference android:title="@string/revanced_enable_phone_layout_title" android:key="revanced_enable_phone_layout" android:summary="@string/revanced_enable_phone_layout_summary" android:defaultValue="false" />SETTINGS: LAYOUT_SWITCH -->
@@ -360,6 +356,10 @@
         <SwitchPreference android:title="@string/revanced_enable_vp9_codec_title" android:key="revanced_enable_vp9_codec" android:defaultValue="false" android:summary="@string/revanced_enable_vp9_codec_summary" />SETTINGS: ENABLE_VP9_CODEC -->
         <!-- SETTINGS: ENABLE_PROTOBUF_SPOOF
         <SwitchPreference android:title="@string/revanced_enable_protobuf_spoof_title" android:key="revanced_enable_protobuf_spoof" android:defaultValue="false" android:summary="@string/revanced_enable_protobuf_spoof_summary" />SETTINGS: ENABLE_PROTOBUF_SPOOF -->
+        <!-- SETTINGS: SPOOF_APP_VERSION
+        <EditTextPreference android:title="@string/revanced_spoof_app_version_title" android:key="revanced_version_number_to_spoof" android:summary="@string/revanced_spoof_app_version_summary" android:defaultValue="" android:hint="18.05.40" android:inputType="text" />
+        <Preference android:summary="@string/revanced_spoof_app_version_details_1" />
+        <Preference android:summary="@string/revanced_spoof_app_version_details_2" />SETTINGS: SPOOF_APP_VERSION -->
 
         <!-- SETTINGS: ABOUT
         <Preference android:title=" " android:selectable="false" android:summary="@string/pref_about_category" />
