@@ -12,10 +12,9 @@ However, until ReVanced Extended **v2.160.1**, most of patches worked properly, 
 So I forked RVX 2.160.1 and released this unofficial (yet another) ReVanced Patches for YouTube 17.34.36.  
 I fixed some issues in 2.160.1 and backported some features (**including protobuf-spoof**) from newer version.
 
-Furthermore, I have successfully made ReVanced Manager work on Android 7.x.  
+Furthermore, I have successfully made ReVanced Manager work on A6-7.  
 So you can build it as easily as regular ReVanced and without Termux!  
-https://github.com/kitadai31/revanced-manager-android7  
-(For Android 6.0, please build in another way.)
+https://github.com/kitadai31/revanced-manager-android6-7
 
 > However, due to stability and performance issues, if you have another newer device, you may want to use it.  
 >
@@ -112,7 +111,7 @@ This repository uses [GitHub Discussions](https://github.com/kitadai31/revanced-
 It can be used for questions, supports, announcements, etc.
 
 ## Todo
-I would like to quit developing based on 2.160.1 and remake it based on the latest RVX. (for well maintainability🔧, updated translation🌍 and new features✨)
+~~I would like to quit developing based on 2.160.1 and remake it based on the latest RVX. (for well maintainability🔧, updated translation🌍 and new features✨)~~ it's difficult
 
 ## I have skill issue...
 Embarrassingly, I'm not very familiar with reverse engineering and also programming. (But I can read a little smali :D )  
