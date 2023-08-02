@@ -3,8 +3,8 @@ package app.revanced.patches.youtube.layout.fullscreen.flimstripoverlay.bytecode
 import app.revanced.patcher.annotation.Name
 import app.revanced.patcher.annotation.Version
 import app.revanced.patcher.data.BytecodeContext
-import app.revanced.patcher.extensions.addInstructions
-import app.revanced.patcher.extensions.removeInstruction
+import app.revanced.patcher.extensions.InstructionExtensions.addInstructionsWithLabels
+import app.revanced.patcher.extensions.InstructionExtensions.removeInstruction
 import app.revanced.patcher.patch.BytecodePatch
 import app.revanced.patcher.patch.PatchResult
 import app.revanced.patcher.patch.PatchResultError
@@ -36,7 +36,7 @@ class HideFilmstripOverlayBytecodePatch : BytecodePatch(
                     val dummyRegister = primaryRegister + 2
                     val fieldReference = (instruction as ReferenceInstruction).reference as FieldReference
 
-                    it.addInstructions(
+                    it.addInstructionsWithLabels(
                         index + 1, """
                             invoke-static {}, $FULLSCREEN_LAYOUT->hideFilmstripOverlay()Z
                             move-result v$dummyRegister
