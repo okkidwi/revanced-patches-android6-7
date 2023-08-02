@@ -8,7 +8,7 @@ import org.jf.dexlib2.Opcode
 object SwipeRefreshLayoutFingerprint : MethodFingerprint(
     returnType = "Z",
     accessFlags = AccessFlags.PUBLIC or AccessFlags.FINAL,
-    parameters = listOf(),
+    parameters = emptyList(),
     opcodes = listOf(
         Opcode.RETURN,
         Opcode.INVOKE_VIRTUAL,

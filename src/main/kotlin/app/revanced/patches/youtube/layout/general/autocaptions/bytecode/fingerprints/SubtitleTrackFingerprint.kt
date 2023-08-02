@@ -8,7 +8,7 @@ import org.jf.dexlib2.Opcode
 object SubtitleTrackFingerprint : MethodFingerprint(
     returnType = "Z",
     accessFlags = AccessFlags.PUBLIC or AccessFlags.FINAL,
-    parameters = listOf(),
+    parameters = emptyList(),
     opcodes = listOf(
         Opcode.CONST_STRING,
         Opcode.INVOKE_VIRTUAL,
