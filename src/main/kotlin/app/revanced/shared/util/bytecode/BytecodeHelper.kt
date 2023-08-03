@@ -20,7 +20,7 @@ internal object BytecodeHelper {
 
                     hookMethod.addInstruction(
                         2,
-                        "invoke-static {}, $UTILS_PATH/$descriptor;->$methods()V"
+                        "invoke-static/range {p0 .. p0}, $UTILS_PATH/$descriptor;->$methods(Landroid/content/Context;)V"
                     )
                 }
             }
