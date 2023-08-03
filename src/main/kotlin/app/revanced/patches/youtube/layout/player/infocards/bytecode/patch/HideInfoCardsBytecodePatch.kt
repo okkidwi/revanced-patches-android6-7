@@ -1,7 +1,6 @@
 package app.revanced.patches.youtube.layout.player.infocards.bytecode.patch
 
 import app.revanced.patcher.annotation.Name
-import app.revanced.patcher.annotation.Version
 import app.revanced.patcher.data.BytecodeContext
 import app.revanced.patcher.extensions.InstructionExtensions.addInstructions
 import app.revanced.patcher.fingerprint.method.impl.MethodFingerprint.Companion.resolve
@@ -16,7 +15,6 @@ import app.revanced.shared.util.integrations.Constants.PLAYER_LAYOUT
 
 @Name("hide-info-cards-bytecode-patch")
 @YouTubeCompatibility
-@Version("0.0.1")
 class HideInfoCardsBytecodePatch : BytecodePatch(
     listOf(InfocardsIncognitoParentFingerprint)
 ) {

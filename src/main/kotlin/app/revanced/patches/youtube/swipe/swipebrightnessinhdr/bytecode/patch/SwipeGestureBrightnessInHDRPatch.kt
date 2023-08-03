@@ -1,7 +1,6 @@
 package app.revanced.patches.youtube.swipe.swipebrightnessinhdr.bytecode.patch
 
 import app.revanced.patcher.annotation.Name
-import app.revanced.patcher.annotation.Version
 import app.revanced.patcher.data.BytecodeContext
 import app.revanced.patcher.extensions.InstructionExtensions.addInstructionsWithLabels
 import app.revanced.patcher.extensions.InstructionExtensions.getInstruction
@@ -16,7 +15,6 @@ import app.revanced.shared.util.integrations.Constants.SWIPE_PATH
 
 @Name("enable-swipe-gesture-brightness-in-hdr-patch")
 @YouTubeCompatibility
-@Version("0.0.1")
 class SwipeGestureBrightnessInHDRPatch : BytecodePatch(
     listOf(
         HDRVideoFingerprint

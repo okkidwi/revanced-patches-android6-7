@@ -2,7 +2,6 @@ package app.revanced.patches.youtube.misc.playercontrols.bytecode.patch
 
 import app.revanced.patcher.annotation.Description
 import app.revanced.patcher.annotation.Name
-import app.revanced.patcher.annotation.Version
 import app.revanced.patcher.data.BytecodeContext
 import app.revanced.patcher.extensions.InstructionExtensions.addInstruction
 import app.revanced.patcher.extensions.InstructionExtensions.getInstruction
@@ -22,7 +21,6 @@ import org.jf.dexlib2.iface.instruction.OneRegisterInstruction
 @DependsOn([SharedResourcdIdPatch::class])
 @Description("Manages the code for the player controls of the YouTube player.")
 @YouTubeCompatibility
-@Version("0.0.1")
 class PlayerControlsBytecodePatch : BytecodePatch(
     listOf(
         BottomControlsInflateFingerprint,

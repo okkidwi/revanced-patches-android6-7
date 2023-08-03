@@ -1,7 +1,6 @@
 package app.revanced.patches.youtube.layout.fullscreen.endscreenoverlay.bytecode.patch
 
 import app.revanced.patcher.annotation.Name
-import app.revanced.patcher.annotation.Version
 import app.revanced.patcher.data.BytecodeContext
 import app.revanced.patcher.extensions.InstructionExtensions.addInstructionsWithLabels
 import app.revanced.patcher.extensions.InstructionExtensions.getInstruction
@@ -20,7 +19,6 @@ import org.jf.dexlib2.iface.instruction.formats.Instruction31i
 @Name("hide-endscreen-overlay-bytecode-patch")
 @DependsOn([ResourceMappingPatch::class])
 @YouTubeCompatibility
-@Version("0.0.1")
 class HideEndscreenOverlayBytecodePatch : BytecodePatch() {
     // list of resource names to get the id of
     private val resourceIds = arrayOf(

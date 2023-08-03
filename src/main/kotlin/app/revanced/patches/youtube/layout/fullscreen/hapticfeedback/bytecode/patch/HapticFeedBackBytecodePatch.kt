@@ -1,7 +1,6 @@
 package app.revanced.patches.youtube.layout.fullscreen.hapticfeedback.bytecode.patch
 
 import app.revanced.patcher.annotation.Name
-import app.revanced.patcher.annotation.Version
 import app.revanced.patcher.data.BytecodeContext
 import app.revanced.patcher.extensions.InstructionExtensions.addInstructionsWithLabels
 import app.revanced.patcher.extensions.InstructionExtensions.getInstruction
@@ -19,7 +18,6 @@ import org.jf.dexlib2.iface.instruction.OneRegisterInstruction
 
 @Name("disable-haptic-feedback-bytecode-patch")
 @YouTubeCompatibility
-@Version("0.0.1")
 class HapticFeedBackBytecodePatch : BytecodePatch(
     listOf(
         MarkerHapticsFingerprint,

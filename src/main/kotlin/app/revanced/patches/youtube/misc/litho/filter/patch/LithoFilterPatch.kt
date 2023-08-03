@@ -1,6 +1,5 @@
 package app.revanced.patches.youtube.misc.litho.filter.patch
 
-import app.revanced.patcher.annotation.Version
 import app.revanced.patcher.data.BytecodeContext
 import app.revanced.patcher.extensions.InstructionExtensions.addInstructionsWithLabels
 import app.revanced.patcher.patch.annotations.DependsOn
@@ -26,7 +25,6 @@ import org.jf.dexlib2.Opcode
     ]
 )
 @YouTubeCompatibility
-@Version("0.0.1")
 class LithoFilterPatch : BytecodePatch(
     listOf(
         LithoFingerprint

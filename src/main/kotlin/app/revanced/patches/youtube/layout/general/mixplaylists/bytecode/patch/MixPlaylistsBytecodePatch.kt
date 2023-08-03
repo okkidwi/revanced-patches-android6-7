@@ -1,7 +1,6 @@
 package app.revanced.patches.youtube.layout.general.mixplaylists.bytecode.patch
 
 import app.revanced.patcher.annotation.Name
-import app.revanced.patcher.annotation.Version
 import app.revanced.patcher.data.BytecodeContext
 import app.revanced.patcher.extensions.InstructionExtensions.getInstruction
 import app.revanced.patcher.fingerprint.method.impl.MethodFingerprintResult
@@ -19,7 +18,6 @@ import org.jf.dexlib2.iface.instruction.formats.Instruction21c
 
 @Name("hide-mix-playlists-bytecode-patch")
 @YouTubeCompatibility
-@Version("0.0.1")
 class MixPlaylistsBytecodePatch : BytecodePatch(
     listOf(
         CreateMixPlaylistFingerprint,

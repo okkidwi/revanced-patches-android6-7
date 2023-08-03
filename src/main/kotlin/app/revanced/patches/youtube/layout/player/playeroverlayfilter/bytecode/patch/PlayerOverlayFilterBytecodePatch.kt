@@ -1,7 +1,6 @@
 package app.revanced.patches.youtube.layout.player.playeroverlayfilter.bytecode.patch
 
 import app.revanced.patcher.annotation.Name
-import app.revanced.patcher.annotation.Version
 import app.revanced.patcher.data.BytecodeContext
 import app.revanced.patcher.extensions.InstructionExtensions.addInstructionsWithLabels
 import app.revanced.patcher.extensions.InstructionExtensions.getInstruction
@@ -20,7 +19,6 @@ import org.jf.dexlib2.iface.instruction.formats.Instruction31i
 @DependsOn([ResourceMappingPatch::class])
 @Name("hide-player-overlay-filter-bytecode-patch")
 @YouTubeCompatibility
-@Version("0.0.1")
 class PlayerOverlayFilterBytecodePatch : BytecodePatch() {
 
     // list of resource names to get the id of

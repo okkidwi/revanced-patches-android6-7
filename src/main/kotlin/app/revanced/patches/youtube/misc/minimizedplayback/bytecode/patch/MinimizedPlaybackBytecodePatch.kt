@@ -1,7 +1,6 @@
 package app.revanced.patches.youtube.misc.minimizedplayback.bytecode.patch
 
 import app.revanced.patcher.annotation.Name
-import app.revanced.patcher.annotation.Version
 import app.revanced.patcher.data.BytecodeContext
 import app.revanced.patcher.data.toMethodWalker
 import app.revanced.patcher.extensions.InstructionExtensions.addInstructions
@@ -24,7 +23,6 @@ import org.jf.dexlib2.iface.reference.MethodReference
 @Name("enable-minimized-playback-bytecode-patch")
 @DependsOn([SharedResourcdIdPatch::class])
 @YouTubeCompatibility
-@Version("0.0.1")
 class MinimizedPlaybackBytecodePatch : BytecodePatch(
     listOf(
         KidsMinimizedPlaybackPolicyControllerFingerprint,

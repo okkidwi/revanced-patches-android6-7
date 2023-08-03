@@ -1,7 +1,6 @@
 package app.revanced.patches.youtube.button.autorepeat.patch
 
 import app.revanced.patcher.annotation.Name
-import app.revanced.patcher.annotation.Version
 import app.revanced.patcher.data.BytecodeContext
 import app.revanced.patcher.extensions.InstructionExtensions.addInstructions
 import app.revanced.patcher.extensions.InstructionExtensions.addInstructionsWithLabels
@@ -20,7 +19,6 @@ import org.jf.dexlib2.iface.instruction.OneRegisterInstruction
 
 @Name("always-autorepeat")
 @YouTubeCompatibility
-@Version("0.0.1")
 class AutoRepeatPatch : BytecodePatch(
     listOf(
         AutoRepeatParentFingerprint,

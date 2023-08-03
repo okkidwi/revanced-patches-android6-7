@@ -1,7 +1,6 @@
 package app.revanced.patches.youtube.layout.general.snackbar.bytecode.patch
 
 import app.revanced.patcher.annotation.Name
-import app.revanced.patcher.annotation.Version
 import app.revanced.patcher.data.BytecodeContext
 import app.revanced.patcher.extensions.InstructionExtensions.addInstructionsWithLabels
 import app.revanced.patcher.extensions.InstructionExtensions.getInstruction
@@ -16,7 +15,6 @@ import app.revanced.shared.util.integrations.Constants.GENERAL_LAYOUT
 
 @Name("hide-snackbar-bytecode-patch")
 @YouTubeCompatibility
-@Version("0.0.1")
 class HideSnackbarBytecodePatch : BytecodePatch(
     listOf(
         HideSnackbarFingerprint

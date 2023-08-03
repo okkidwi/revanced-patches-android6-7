@@ -1,7 +1,6 @@
 package app.revanced.patches.youtube.misc.protobufspoof.patch
 
 import app.revanced.patcher.annotation.Name
-import app.revanced.patcher.annotation.Version
 import app.revanced.patcher.data.BytecodeContext
 import app.revanced.patcher.data.toMethodWalker
 import app.revanced.patcher.extensions.InstructionExtensions.addInstruction
@@ -26,7 +25,6 @@ import app.revanced.shared.util.integrations.Constants.MISC_PATH
 @Name("protobuf-spoof-bytecode-patch")
 @DependsOn([PlayerTypeHookPatch::class])
 @YouTubeCompatibility
-@Version("0.0.1")
 class ProtobufSpoofBytecodePatch : BytecodePatch(
     listOf(
         BadResponseFingerprint,

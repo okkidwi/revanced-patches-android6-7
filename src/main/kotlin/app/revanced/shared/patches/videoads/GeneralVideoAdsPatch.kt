@@ -1,7 +1,6 @@
 package app.revanced.shared.patches.videoads
 
 import app.revanced.patcher.annotation.Name
-import app.revanced.patcher.annotation.Version
 import app.revanced.patcher.data.BytecodeContext
 import app.revanced.patcher.data.toMethodWalker
 import app.revanced.patcher.extensions.InstructionExtensions.addInstructions
@@ -19,7 +18,6 @@ import app.revanced.shared.fingerprints.MainstreamVideoAdsParentFingerprint
 import app.revanced.shared.extensions.toErrorResult
 
 @Name("general-video-ads-patch")
-@Version("0.0.1")
 class GeneralVideoAdsPatch : BytecodePatch(
     listOf(
         LegacyVideoAdsFingerprint,

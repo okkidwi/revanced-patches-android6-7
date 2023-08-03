@@ -1,7 +1,6 @@
 package app.revanced.patches.youtube.misc.openlinksdirectly.bytecode.patch
 
 import app.revanced.patcher.annotation.Name
-import app.revanced.patcher.annotation.Version
 import app.revanced.patcher.data.BytecodeContext
 import app.revanced.patcher.extensions.InstructionExtensions.replaceInstruction
 import app.revanced.patcher.patch.BytecodePatch
@@ -15,7 +14,6 @@ import org.jf.dexlib2.iface.instruction.formats.Instruction35c
 
 @Name("enable-open-links-directly-bytecode-patch")
 @YouTubeCompatibility
-@Version("0.0.1")
 class OpenLinksDirectlyBytecodePatch : BytecodePatch(
     listOf(
         OpenLinksDirectlyFingerprintPrimary,

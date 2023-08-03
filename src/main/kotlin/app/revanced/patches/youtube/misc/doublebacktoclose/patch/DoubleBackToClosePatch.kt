@@ -1,7 +1,6 @@
 package app.revanced.patches.youtube.misc.doublebacktoclose.patch
 
 import app.revanced.patcher.annotation.Name
-import app.revanced.patcher.annotation.Version
 import app.revanced.patcher.data.BytecodeContext
 import app.revanced.patcher.data.toMethodWalker
 import app.revanced.patcher.extensions.InstructionExtensions.addInstruction
@@ -23,7 +22,6 @@ import app.revanced.shared.util.integrations.Constants.UTILS_PATH
 // unnecessary for Android 6~7
 // @DependsOn([PredictiveBackGesturePatch::class])
 @YouTubeCompatibility
-@Version("0.0.1")
 class DoubleBackToClosePatch : BytecodePatch(
     listOf(
         OnBackPressedFingerprint,

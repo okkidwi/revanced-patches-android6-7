@@ -2,7 +2,6 @@ package app.revanced.patches.youtube.layout.general.pivotbar.shortspivotbar.byte
 
 import app.revanced.shared.extensions.toErrorResult
 import app.revanced.patcher.annotation.Name
-import app.revanced.patcher.annotation.Version
 import app.revanced.patcher.data.BytecodeContext
 import app.revanced.patcher.data.toMethodWalker
 import app.revanced.patcher.extensions.InstructionExtensions.addInstruction
@@ -21,7 +20,6 @@ import org.jf.dexlib2.iface.instruction.ReferenceInstruction
 
 @Name("hide-shorts-pivot-bar-bytecode-patch")
 @YouTubeCompatibility
-@Version("0.0.1")
 class ShortsPivotBarBytecodePatch : BytecodePatch(
     listOf(
         PivotBarFingerprint,

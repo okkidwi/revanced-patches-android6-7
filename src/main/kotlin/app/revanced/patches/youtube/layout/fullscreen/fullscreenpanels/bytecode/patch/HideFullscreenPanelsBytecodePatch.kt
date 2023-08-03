@@ -1,7 +1,6 @@
 package app.revanced.patches.youtube.layout.fullscreen.fullscreenpanels.bytecode.patch
 
 import app.revanced.patcher.annotation.Name
-import app.revanced.patcher.annotation.Version
 import app.revanced.patcher.data.BytecodeContext
 import app.revanced.patcher.extensions.InstructionExtensions.addInstructions
 import app.revanced.patcher.extensions.InstructionExtensions.addInstructionsWithLabels
@@ -22,7 +21,6 @@ import org.jf.dexlib2.iface.instruction.formats.Instruction35c
 
 @Name("hide-fullscreen-panels-bytecode-patch")
 @YouTubeCompatibility
-@Version("0.0.1")
 class HideFullscreenPanelsBytecodePatch : BytecodePatch(
     listOf(
         FullscreenViewAdderFingerprint,

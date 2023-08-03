@@ -1,7 +1,6 @@
 package app.revanced.patches.youtube.extended.forcevp9.bytecode.patch
 
 import app.revanced.patcher.annotation.Name
-import app.revanced.patcher.annotation.Version
 import app.revanced.patcher.data.BytecodeContext
 import app.revanced.patcher.extensions.InstructionExtensions.addInstructions
 import app.revanced.patcher.extensions.InstructionExtensions.getInstruction
@@ -24,7 +23,6 @@ import org.jf.dexlib2.iface.instruction.ReferenceInstruction
 
 @Name("force-vp9-codec-bytecode-patch")
 @YouTubeCompatibility
-@Version("0.0.1")
 class ForceVP9CodecBytecodePatch : BytecodePatch(
     listOf(
         LayoutSwitchFingerprint,

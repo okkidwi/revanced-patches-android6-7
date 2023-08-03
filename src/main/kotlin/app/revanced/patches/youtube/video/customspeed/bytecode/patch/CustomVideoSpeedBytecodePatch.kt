@@ -1,7 +1,6 @@
 package app.revanced.patches.youtube.video.customspeed.bytecode.patch
 
 import app.revanced.patcher.annotation.Name
-import app.revanced.patcher.annotation.Version
 import app.revanced.patcher.data.BytecodeContext
 import app.revanced.patcher.extensions.InstructionExtensions.addInstructionsWithLabels
 import app.revanced.patcher.extensions.InstructionExtensions.getInstruction
@@ -27,7 +26,6 @@ import org.jf.dexlib2.iface.reference.MethodReference
 @Name("custom-speed-bytecode-patch")
 @DependsOn([PatchOptions::class])
 @YouTubeCompatibility
-@Version("0.0.1")
 class CustomVideoSpeedBytecodePatch : BytecodePatch(
     listOf(
         SpeedArrayGeneratorFingerprint,

@@ -1,7 +1,6 @@
 package app.revanced.shared.patches.playerbutton
 
 import app.revanced.patcher.annotation.Name
-import app.revanced.patcher.annotation.Version
 import app.revanced.patcher.data.BytecodeContext
 import app.revanced.patcher.extensions.InstructionExtensions.addInstructions
 import app.revanced.patcher.extensions.InstructionExtensions.getInstruction
@@ -22,7 +21,6 @@ import org.jf.dexlib2.builder.instruction.BuilderInstruction35c
 @Name("hook-player-button-patch")
 @DependsOn([SharedResourcdIdPatch::class])
 @YouTubeCompatibility
-@Version("0.0.1")
 class PlayerButtonPatch : BytecodePatch(
     listOf(
         LiveChatFingerprint

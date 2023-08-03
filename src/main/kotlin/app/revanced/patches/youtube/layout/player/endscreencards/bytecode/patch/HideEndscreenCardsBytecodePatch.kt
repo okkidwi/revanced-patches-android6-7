@@ -1,7 +1,6 @@
 package app.revanced.patches.youtube.layout.player.endscreencards.bytecode.patch
 
 import app.revanced.patcher.annotation.Name
-import app.revanced.patcher.annotation.Version
 import app.revanced.patcher.data.BytecodeContext
 import app.revanced.patcher.extensions.InstructionExtensions.getInstruction
 import app.revanced.patcher.fingerprint.method.impl.MethodFingerprint
@@ -15,7 +14,6 @@ import org.jf.dexlib2.iface.instruction.formats.Instruction21c
 
 @Name("hide-endscreen-cards-bytecode-patch")
 @YouTubeCompatibility
-@Version("0.0.1")
 class HideEndscreenCardsBytecodePatch : BytecodePatch(
     listOf(
         LayoutCircleFingerprint,

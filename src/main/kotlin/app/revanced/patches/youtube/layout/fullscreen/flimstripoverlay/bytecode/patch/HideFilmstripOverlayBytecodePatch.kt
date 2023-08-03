@@ -1,7 +1,6 @@
 package app.revanced.patches.youtube.layout.fullscreen.flimstripoverlay.bytecode.patch
 
 import app.revanced.patcher.annotation.Name
-import app.revanced.patcher.annotation.Version
 import app.revanced.patcher.data.BytecodeContext
 import app.revanced.patcher.extensions.InstructionExtensions.addInstructionsWithLabels
 import app.revanced.patcher.extensions.InstructionExtensions.removeInstruction
@@ -20,7 +19,6 @@ import org.jf.dexlib2.iface.reference.FieldReference
 
 @Name("hide-filmstrip-overlay-bytecode-patch")
 @YouTubeCompatibility
-@Version("0.0.1")
 class HideFilmstripOverlayBytecodePatch : BytecodePatch(
     listOf(
         ScrubbingLabelFingerprint

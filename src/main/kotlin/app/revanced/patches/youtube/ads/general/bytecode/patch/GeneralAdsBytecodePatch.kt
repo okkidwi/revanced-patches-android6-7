@@ -1,7 +1,6 @@
 package app.revanced.patches.youtube.ads.general.bytecode.patch
 
 import app.revanced.patcher.annotation.Name
-import app.revanced.patcher.annotation.Version
 import app.revanced.patcher.data.BytecodeContext
 import app.revanced.patcher.extensions.InstructionExtensions.addInstructionsWithLabels
 import app.revanced.patcher.extensions.InstructionExtensions.getInstruction
@@ -30,7 +29,6 @@ import org.jf.dexlib2.iface.reference.MethodReference
 @DependsOn([ResourceMappingPatch::class])
 @Name("hide-general-ads-bytecode-patch")
 @YouTubeCompatibility
-@Version("0.0.1")
 class GeneralAdsBytecodePatch : BytecodePatch(
     listOf(ComponentContextParserFingerprint)
 ) {

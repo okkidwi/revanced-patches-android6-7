@@ -1,7 +1,6 @@
 package app.revanced.patches.youtube.layout.general.startupshortsreset.bytecode.patch
 
 import app.revanced.patcher.annotation.Name
-import app.revanced.patcher.annotation.Version
 import app.revanced.patcher.data.BytecodeContext
 import app.revanced.patcher.extensions.InstructionExtensions.addInstructionsWithLabels
 import app.revanced.patcher.extensions.InstructionExtensions.getInstruction
@@ -17,7 +16,6 @@ import org.jf.dexlib2.iface.instruction.OneRegisterInstruction
 
 @Name("hide-startup-shorts-player-bytecode-patch")
 @YouTubeCompatibility
-@Version("0.0.1")
 class HideShortsOnStartupBytecodePatch : BytecodePatch(
     listOf(
         UserWasInShortsFingerprint

@@ -1,7 +1,6 @@
 package app.revanced.patches.youtube.layout.general.autocaptions.bytecode.patch
 
 import app.revanced.patcher.annotation.Name
-import app.revanced.patcher.annotation.Version
 import app.revanced.patcher.data.BytecodeContext
 import app.revanced.patcher.extensions.InstructionExtensions.addInstructions
 import app.revanced.patcher.extensions.InstructionExtensions.addInstructionsWithLabels
@@ -20,7 +19,6 @@ import app.revanced.shared.util.integrations.Constants.GENERAL_LAYOUT
 
 @Name("hide-auto-captions-bytecode-patch")
 @YouTubeCompatibility
-@Version("0.0.1")
 class AutoCaptionsBytecodePatch : BytecodePatch(
     listOf(
         StartVideoInformerFingerprint,

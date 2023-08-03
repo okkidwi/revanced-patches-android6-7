@@ -2,7 +2,6 @@ package app.revanced.patches.youtube.misc.swiperefresh.patch
 
 import app.revanced.patcher.annotation.Description
 import app.revanced.patcher.annotation.Name
-import app.revanced.patcher.annotation.Version
 import app.revanced.patcher.data.BytecodeContext
 import app.revanced.patcher.extensions.InstructionExtensions.addInstruction
 import app.revanced.patcher.extensions.InstructionExtensions.getInstruction
@@ -17,7 +16,6 @@ import org.jf.dexlib2.iface.instruction.OneRegisterInstruction
 @Name("enable-swipe-refresh")
 @Description("Enable swipe refresh.")
 @YouTubeCompatibility
-@Version("0.0.1")
 class SwipeRefreshPatch : BytecodePatch(
     listOf(
         SwipeRefreshLayoutFingerprint
