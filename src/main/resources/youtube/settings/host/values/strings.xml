@@ -644,4 +644,5 @@ Examples of benefits of version spoofing:
 Please read \"More information about Spoof app version\""</string>
     <string name="revanced_spoof_app_version_info_title">More information about \"Spoof app version\"</string>
     <string name="revanced_spoof_app_version_info_summary">https://github.com/kitadai31/revanced-patches-android6-7/wiki/Spoof-app-version-information</string>
+    <string name="revanced_reboot_first_run">Restart to load the layout normally when the first run</string>
 </resources>

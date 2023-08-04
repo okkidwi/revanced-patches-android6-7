@@ -15,6 +15,7 @@ import app.revanced.shared.extensions.findMutableMethodOf
 import app.revanced.shared.extensions.injectTheme
 import app.revanced.shared.extensions.toErrorResult
 import app.revanced.shared.patches.mapping.ResourceMappingPatch
+import app.revanced.shared.util.bytecode.BytecodeHelper
 import app.revanced.shared.util.integrations.Constants.INTEGRATIONS_PATH
 import org.jf.dexlib2.Opcode
 import org.jf.dexlib2.iface.instruction.formats.Instruction31i
@@ -92,6 +93,8 @@ class SettingsBytecodePatch : BytecodePatch(
                 )
             }
         } ?: return ThemeSetterSystemFingerprint.toErrorResult()
+
+        BytecodeHelper.injectInit(context, "FirstRun", "initializationRVX")
 
         return PatchResultSuccess()
     }
