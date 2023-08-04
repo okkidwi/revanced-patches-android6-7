@@ -13,16 +13,16 @@ import app.revanced.shared.annotation.YouTubeCompatibility
 import app.revanced.shared.util.resources.ResourceHelper
 
 @Patch
-@Name("protobuf-spoof")
-@Description("Spoofs the protobuf to prevent playback issues.")
+@Name("spoof-player-parameters")
+@Description("Spoofs player parameters to prevent the endless buffering issue.")
 @DependsOn(
     [
-        ProtobufSpoofBytecodePatch::class,
+        SpoofPlayerParameterBytecodePatch::class,
         SettingsPatch::class
     ]
 )
 @YouTubeCompatibility
-class ProtobufSpoofPatch : ResourcePatch {
+class SpoofPlayerParameterPatch : ResourcePatch {
     override fun execute(context: ResourceContext): PatchResult {
 
         /*
@@ -38,7 +38,7 @@ class ProtobufSpoofPatch : ResourcePatch {
 
         ResourceHelper.patchSuccess(
             context,
-            "protobuf-spoof"
+            "spoof-player-parameters"
         )
 
         return PatchResultSuccess()
