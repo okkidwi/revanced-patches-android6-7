@@ -89,14 +89,15 @@ https://github.com/kitadai31/revanced-manager-android6-7
 | `materialyou` | Enables MaterialYou theme for Android 12+ | 17.34.36 |
 | `microg-support` | Allows YouTube ReVanced to run without root and under a different package name with Vanced MicroG. | 17.34.36 |
 | `optimize-resource` | Removes duplicate resources and adds missing translation files from YouTube. | 17.34.36 |
+| `os-version-check` | Check the Android version and show a warning if the app is running on Android 8.0 or higher. | 17.34.36 |
 | `overlay-buttons` | Add overlay buttons for ReVanced Extended. | 17.34.36 |
 | `patch-options` | Create an options.toml file. | 17.34.36 |
-| `protobuf-spoof` | Spoofs the protobuf to prevent playback issues. | 17.34.36 |
 | `remove-player-button-background` | Removes the background from the video player buttons. | 17.34.36 |
 | `return-youtube-dislike` | Shows the dislike count of videos using the Return YouTube Dislike API. | 17.34.36 |
 | `settings` | Applies mandatory patches to implement ReVanced settings into the application. | 17.34.36 |
 | `sponsorblock` | Integrates SponsorBlock which allows skipping video segments such as sponsored content. | 17.34.36 |
 | `spoof-app-version` | Spoof the YouTube client version to enable the new layout or restore old layout. | 17.34.36 |
+| `spoof-player-parameters` | Spoofs player parameters to prevent the endless buffering issue. | 17.34.36 |
 | `swipe-controls` | Adds volume and brightness swipe controls. | 17.34.36 |
 | `switch-create-notification` | Switching the create button and notification button. | 17.34.36 |
 | `theme` | Applies a custom theme (default: amoled). | 17.34.36 |
