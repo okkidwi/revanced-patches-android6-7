@@ -4,6 +4,11 @@
 An unofficial ReVanced Extended for YouTube 17.34.36.  
 Based on inotia00's ReVanced Extended [v2.160.1](https://github.com/inotia00/revanced-patches/releases/tag/v2.160.1)
 
+## How to patch
+See [[How to build]](https://github.com/kitadai31/revanced-patches/wiki/How-to-build) page in documentations.
+
+Other informations are also avalable on [[documentations]](https://github.com/kitadai31/revanced-patches-android6-7/wiki) (GitHub Wiki).
+
 ## Overview
 The last YouTube app available on Android 6 or 7 is **17.34.36**, but the latest ReVanced and ReVanced Extended are not compatible with 17.34.36.
 
@@ -16,14 +21,9 @@ Furthermore, I have successfully made ReVanced Manager work on A6-7.
 So you can build it as easily as regular ReVanced and without Termux!  
 https://github.com/kitadai31/revanced-manager-android6-7
 
-> However, due to stability and performance issues, if you have another newer device, you may want to use it.  
+> However, due to stability and performance issues, if you have another newer device, you may want to use it.
 >
 > For this "revanced-patches-android6-7" I have checked that the patch completes successfully on my main smartphone (Snapdragon 410, 2GB RAM, Android 7.1.1), but it took **45 minutes** to complete.
-
-## How to build
-See [[How to build]](https://github.com/kitadai31/revanced-patches/wiki/How-to-build) page in documentations.
-
-Other informations are also avalable on [[documentations]](https://github.com/kitadai31/revanced-patches-android6-7/wiki) (GitHub Wiki).
 
 ## 🧩 Patches List
 
@@ -103,6 +103,14 @@ Other informations are also avalable on [[documentations]](https://github.com/ki
 | `translations` | Add Crowdin Translations. | 17.34.36 |
 </details>
 
+## Telegram <img height="24px" src="https://user-images.githubusercontent.com/13122796/178032213-faf25ab8-0bc3-4a94-a730-b524c96df124.png" />
+Telegram channel was opened! (2023-06-17)  
+RVX for Andorid 6-7 News  
+https://t.me/rvx_for_a6_7
+
+Updates and the latest information will be announced through this channel.  
+You can view the channel even if you don't have Telegram account.
+
 ## Issue
 For suggestions and bug reports, open an issue.
 
@@ -110,8 +118,11 @@ For suggestions and bug reports, open an issue.
 This repository uses [GitHub Discussions](https://github.com/kitadai31/revanced-patches-android6-7/discussions).  
 It can be used for questions, supports, announcements, etc.
 
+Also, Telegram group is available now (Started 2023-07-30)  
+https://t.me/rvx_for_a6_7_chat
+
 ## Todo
-~~I would like to quit developing based on 2.160.1 and remake it based on the latest RVX. (for well maintainability🔧, updated translation🌍 and new features✨)~~ it's difficult
+~~I would like to quit developing based on 2.160.1 and remake it based on the latest RVX. (for well maintainability🔧, updated translation🌍 and new features✨)~~ it's difficult for me
 
 ## I have skill issue...
 Embarrassingly, I'm not very familiar with reverse engineering and also programming. (But I can read a little smali :D )  
